@@ -1,0 +1,1751 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+    <title>동국대학교 남산학사 > 공지/안내사항 > 주간식단표 </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta property="og:image" content="https://dorm.dongguk.edu/resources/images/site/common/og_thumbnail.jpg?v=01">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="/js/jquery/jquery-1.12.4.min.js" type="text/javascript"></script>
+    <script src="/js/cmmn/seCommon.js" type="text/javascript"></script>
+    <script src="/js/jquery/printThis.js" type="text/javascript" ></script>
+    <script src="/resources/site/dorm/resource/js/slick.min.js"></script>
+    <link href="/resources/site/dorm/resource/css/pretendard.css" rel="stylesheet" type="text/css">
+    <link href="/resources/site/dorm/resource/css/slick.css" rel="stylesheet" type="text/css">
+    <link href="/resources/site/dorm/resource/css/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="/resources/site/dorm/resource/css/common.css" rel="stylesheet" type="text/css">
+    <link href="/resources/site/dorm/resource/css/default.css" rel="stylesheet" type="text/css">
+    <link href="/resources/site/dorm/resource/css/board.css" rel="stylesheet" type="text/css">
+    <link href="/resources/site/dorm/resource/css/contents.css" rel="stylesheet" type="text/css">
+    <link href="/resources/site/dorm/resource/css/contents_dorm.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        /* TODO https: 리다이렉트*/
+        if(window.location.protocol === 'http:'){
+            var host = window.location.host.split(':')[0];
+            var test_state = host.split('.')[2];
+            if(host === 'localhost' || test_state === 'se') {
+            } else { location.href='https://' + host + window.location.pathname + window.location.search;}
+        }
+    </script>
+</head>
+<body>
+<!-- wrap -->
+
+<div id="wrap">
+    
+
+
+
+
+
+<script type="text/javascript">
+
+    // sns 공유할 현재 URL
+    var share_url = window.location.href;
+
+    $(document).ready(function(){
+
+        
+
+        //팝업
+        $("a.popup_open").on("click", function(e){
+            $("html").addClass("fixed");
+			$(".top-layer-pop").addClass("show");
+    		
+
+            
+            $.ajax({
+                url: '/ajax/popup/list',
+                type: 'post',
+                dataType: 'json',
+                success: function (res) {
+                    var pop = '';
+                    if(res.length > 0){
+                        res.forEach(function(v, i){
+                            if(v.popup_type == 'I'){
+                                pop +='<li>';
+                                pop +='<a href="';
+                                if(v.link_type =='P'){
+                                    pop += '#none';
+                                }else {
+                                    pop += v.link_url;
+                                }
+                                pop +='" target="';
+                                if(v.link_type == 'B'){
+                                    pop += '_blank';
+                                }else if(v.link_type =='N') {
+                                    pop += '_self';
+                                }else {
+                                    pop += '';
+                                }
+                                pop +='">';
+                                pop +='<div class="img">';
+                                pop +='<img src="/cmmn/fileView?path='+v.file_path+'&amp;physical='+v.file_sys_nm+'&amp;contentType=image" onerror="this.src=\'/resources/images/site/common/no_image.png\'">';
+                                pop +='</div>';
+                                pop +='<p class="sr-only">'+v.popup_title+'</p>';
+                                pop +='</a></li>';
+							}else if(v.popup_type == 'H'){
+    							pop +='<li>';
+    							pop +='<div class="img">';
+    							pop += v.content;
+    							pop +='</div>';
+    							pop +='</li>';
+							}
+
+                        });
+                    }else{
+                        pop +='<div class="popup-empty">등록된 팝업이 없습니다</div>';
+                    }
+                    $('.tpop-list').empty();
+                    $('.tpop-list').append(pop);
+
+                    if($('.tpop-list > li').length >=1){
+                        popupSlick();
+                    }
+
+                }
+            });
+            
+
+
+        });
+
+        $(".pop-close").on("click", function(){
+            $("html").removeClass("fixed");
+            $(".top-layer-pop").removeClass("show");
+            $('.tpop-list').slick("unslick");
+        });
+
+        if($("#kakaoBtn").length > 0){
+
+//            var url_path = window.location.pathname;
+//            var url_param = window.location.href.split("?");
+//
+//
+//            if(url_param.length > 1){
+//                url_param = url_param[1]
+//            }
+//
+//            var sns_url = url_path + url_param;
+
+//             var share_url = window.location.href;
+
+            // 사용할 앱의 JavaScript 키 설정
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        }
+    });
+
+    //SNS 공유
+    function shareSNS(sns_type){
+        switch (sns_type){
+            case "facebook":
+            
+                window.open("https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(share_url));
+                break;
+
+            case "twitter":
+                window.open("https://twitter.com/intent/tweet"
+                    +"?"
+                    +"text="+encodeURIComponent("동국대학교 - 공지/안내사항") // Title in this html document
+                    +"&url="+encodeURIComponent(share_url)
+                    
+                );
+                break;
+
+            case "kakao":
+                // 위에 있음.
+                break;
+        }
+    }
+
+    //상단 팝업존
+    function setCookie( name, value, expiredays ) {
+        var todayDate = new Date();
+        todayDate.setDate( todayDate.getDate() + expiredays );
+        document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+    }
+
+    function closePop() {
+        setCookie( "imgpop", "done" , 1 );
+        $('.top-layer-pop').removeClass('show');
+        $('.tpop-list').slick("unslick");
+    }
+
+    function getCookie(name) {
+        var Found = false;
+        var start, end;
+        var i = 0;
+
+        while(i <= document.cookie.length) {
+            start = i;
+            end = start + name.length;
+            if(document.cookie.substring(start, end) == name) {
+                Found = true;
+                break;
+            }
+            i++;
+        }
+        if(Found == true) {
+            start = end + 1;
+            end = start+name.length-2;
+            return document.cookie.substring(start, end);
+        }
+        return;
+    }
+
+    function popupSlick(){
+        //slick
+        $('.tpop-list').slick({
+            slidesToShow: 4,/* 화면에 보여질 이미지 갯수*/
+            slidesToScroll: 4,/*  스크롤시 이동할 이미지 갯수 */
+            infinite: true,/* 맨끝이미지에서 끝나지 않고 다시 맨앞으로 이동 */
+            dots: true,/*  아래점  */
+            // variableWidth : true,
+            responsive: [// 반응형 웹 구현 옵션
+                {
+                    breakpoint: 9999,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4
+                    }
+                },
+
+                {
+                    breakpoint: 1300,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                }
+                ,
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    }
+</script>
+<script src="/resources/site/dorm/resource/js/mobile_menu.js"></script>
+<script src="/resources/site/dorm/resource/js/script.js"></script>
+<!--상단팝업존-->
+<div class="top-layer-pop" >
+    <!--.pop a 클릭 시 .top-layer-pop 에 클래스 show 추가 , body 클래스 scrn 추가-->
+    <div class="tpop-wrap">
+        <div class="tpop-box">
+            <h2>popup zone</h2>
+            <ul class="tpop-list">
+                
+                    
+                    
+                        <li>
+                            <div class="popup-empty">등록된 팝업이 없습니다</div>
+                        </li>
+
+                    
+                
+            </ul>
+            <div class="pop-btn-area">
+                <a href="javascript:closePop()" class="pop-today-close">오늘 하루 보지 않기</a>
+                <a href="#none" class="pop-close">닫기</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        var eventCookie = getCookie("imgpop");
+        if (eventCookie == "done") {
+            $('.top-layer-pop').removeClass('show');
+        }else{
+            
+
+        }
+
+    });
+</script>
+<!-- header -->
+<div id="header" class="header">
+    <div class="top_util">
+        <div class="wrap">
+            <ul class="link_group">
+                <li class="on"><a href="https://www.dongguk.edu/" target="_blank" title="새창열림">동국대학교</a></li>
+                <li><a href="https://nportal.dongguk.edu" target="_blank" title="새창열림">PORTAL</a></li>
+                <li><a href="https://ndrims.dongguk.edu" target="_blank" title="새창열림">nDRIMS</a></li><li><a href="https://eclass.dongguk.edu/" target="_blank" title="새창열림">e-Class</a></li>
+                <li><a href="https://gw.dongguk.edu" target="_blank" title="새창열림">GROUPWAWRE</a></li>
+                <li><a href="https://mail.dongguk.edu" target="_blank" title="새창열림">WEBMAIL</a></li><li><a href="http://lib.dongguk.edu/" target="_blank" title="새창열림">중앙도서관</a></li>
+                
+                
+                
+                
+                
+            </ul>
+            <div class="link_gr"><a href="https://search.dongguk.edu/" class="search" target="_blank" title="새창열림"><span>SEARCH</span></a><a href="#" class="popup_open"><span>POPUP</span></a></div>
+        </div>
+    </div>
+    <div class="header_wrap">
+        <div class="head_menu">
+            <h1>
+                <a href="/"><img src="/resources/site/dorm/resource/images/layout/common/header_logo.png" alt="동국대학교 dongguk university"><span>남산학사</span></a>
+            </h1>
+            <div id="gnb" class="gnb">
+
+                <ul class="depth01">
+                    
+                    
+                    
+            
+            
+            <li>
+                
+                
+                    
+                    <a href="#" target="">
+                        
+                        
+                        <span>남산학사소개</span></a>
+
+                    <div class="depth02 header_drop" style="display: none;">
+                        <ul>
+                            
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="/page/2119" target="">
+                                                
+                                                
+                                                    관장 인사말
+                                            </a>
+                                </li>
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="/page/2120" target="">
+                                                
+                                                
+                                                    조직 및 구성
+                                            </a>
+                                </li>
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="/page/2121" target="">
+                                                
+                                                
+                                                    찾아오시는 길
+                                            </a>
+                                </li>
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="/page/2122" target="">
+                                                
+                                                
+                                                    Contact us
+                                            </a>
+                                </li>
+                            
+                            
+                    
+                </ul>
+            </div>
+            </li>
+            
+            
+            
+            <li>
+                
+                
+                    
+                    <a href="#" target="">
+                        
+                        
+                        <span>내외부전경</span></a>
+
+                    <div class="depth02 header_drop" style="display: none;">
+                        <ul>
+                            
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="/page/2123" target="">
+                                                
+                                                
+                                                    남산학사 전경
+                                            </a>
+                                </li>
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="/page/2124" target="">
+                                                
+                                                
+                                                    남산학사 호실 내부
+                                            </a>
+                                </li>
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="/page/2125" target="">
+                                                
+                                                
+                                                    복지시설
+                                            </a>
+                                </li>
+                            
+                            
+                    
+                </ul>
+            </div>
+            </li>
+            
+            
+            
+            <li>
+                
+                
+                    
+                    <a href="#" target="">
+                        
+                        
+                        <span>사생생활안내</span></a>
+
+                    <div class="depth02 header_drop" style="display: none;">
+                        <ul>
+                            
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="/page/2126" target="">
+                                                
+                                                
+                                                    사생수칙
+                                            </a>
+                                </li>
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="/page/2127" target="">
+                                                
+                                                
+                                                    생활 및 안전 관리
+                                            </a>
+                                </li>
+                            
+                            
+                    
+                </ul>
+            </div>
+            </li>
+            
+            
+            
+            <li>
+                
+                
+                    
+                    <a href="#" target="">
+                        
+                        
+                        <span>Dorm Info</span></a>
+
+                    <div class="depth02 header_drop" style="display: none;">
+                        <ul>
+                            
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="/article/notice/detail/65087" target="">
+                                                
+                                                
+                                                    English
+                                            </a>
+                                </li>
+                            
+                            
+                    
+                </ul>
+            </div>
+            </li>
+            
+            
+            
+            <li>
+                
+                
+                    
+                    <a href="#" target="">
+                        
+                        
+                        <span>선발 및 입/퇴사 안내</span></a>
+
+                    <div class="depth02 header_drop" style="display: none;">
+                        <ul>
+                            
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="/page/2128" target="">
+                                                
+                                                
+                                                    선발기준
+                                            </a>
+                                </li>
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="/page/2129" target="">
+                                                
+                                                
+                                                    입/퇴사 안내
+                                            </a>
+                                </li>
+                            
+                            
+                    
+                </ul>
+            </div>
+            </li>
+            
+            
+            
+            <li>
+                
+                
+                    
+                    <a href="#" target="">
+                        
+                        
+                        <span>공지/안내사항</span></a>
+
+                    <div class="depth02 header_drop" style="display: none;">
+                        <ul>
+                            
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                    <a href="/article/notice/list" target="">
+                                        
+                                        
+                                            
+                                                
+                                                    공지사항
+                                            </a>
+                                </li>
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                    <a href="/article/form/list" target="">
+                                        
+                                        
+                                            
+                                                
+                                                    각종신청양식
+                                            </a>
+                                </li>
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                    <a href="/article/food/list" target="">
+                                        
+                                        
+                                            
+                                                
+                                                    주간식단표
+                                            </a>
+                                </li>
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                    <a href="/article/faq/list" target="">
+                                        
+                                        
+                                            
+                                                
+                                                    FAQ
+                                            </a>
+                                </li>
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="https://www.dongguk.edu/qna/list" target="_blank">
+                                                
+                                                
+                                                    Q&A
+                                            </a>
+                                </li>
+                            
+                            
+                    
+            
+                            
+                                <li >
+                                    
+                                    
+                                        
+                                            
+                                            <a href="https://www.dongguk.edu/minwon/sisul/list" target="_blank">
+                                                
+                                                
+                                                    시설민원접수
+                                            </a>
+                                </li>
+                            
+                            
+                        </ul>
+                    </div>
+            </li>
+            </ul>
+
+            <div class="m_tit">
+                <strong>동국대학교<br>남산학사</strong>
+                <p>Dongguk University</p>
+            </div>
+            <div class="gnb_util">
+                <button class="btn_ham"><span class="blind">전체메뉴</span></button>
+                <div class="full_menu" style="display: none;">
+                    <div class="wrap">
+                        <ul class="depth1">
+                            
+                            
+                            
+                        
+                        
+                        <li class="parent_li active" >
+                            
+                            
+                                
+                                <a href="#" target="">
+                                    
+                                    
+                                    <span>남산학사소개</span></a>
+                                <ul class="depth2">
+                                    
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="/page/2119" target="">
+                                                        
+                                                        
+                                                            관장 인사말
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="/page/2120" target="">
+                                                        
+                                                        
+                                                            조직 및 구성
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="/page/2121" target="">
+                                                        
+                                                        
+                                                            찾아오시는 길
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="/page/2122" target="">
+                                                        
+                                                        
+                                                            Contact us
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        </ul>
+                        </li>
+                        
+                        
+                        
+                        <li class="parent_li " >
+                            
+                            
+                                
+                                <a href="#" target="">
+                                    
+                                    
+                                    <span>내외부전경</span></a>
+                                <ul class="depth2">
+                                    
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="/page/2123" target="">
+                                                        
+                                                        
+                                                            남산학사 전경
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="/page/2124" target="">
+                                                        
+                                                        
+                                                            남산학사 호실 내부
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="/page/2125" target="">
+                                                        
+                                                        
+                                                            복지시설
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        </ul>
+                        </li>
+                        
+                        
+                        
+                        <li class="parent_li " >
+                            
+                            
+                                
+                                <a href="#" target="">
+                                    
+                                    
+                                    <span>사생생활안내</span></a>
+                                <ul class="depth2">
+                                    
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="/page/2126" target="">
+                                                        
+                                                        
+                                                            사생수칙
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="/page/2127" target="">
+                                                        
+                                                        
+                                                            생활 및 안전 관리
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        </ul>
+                        </li>
+                        
+                        
+                        
+                        <li class="parent_li " >
+                            
+                            
+                                
+                                <a href="#" target="">
+                                    
+                                    
+                                    <span>Dorm Info</span></a>
+                                <ul class="depth2">
+                                    
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="/article/notice/detail/65087" target="">
+                                                        
+                                                        
+                                                            English
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        </ul>
+                        </li>
+                        
+                        
+                        
+                        <li class="parent_li " >
+                            
+                            
+                                
+                                <a href="#" target="">
+                                    
+                                    
+                                    <span>선발 및 입/퇴사 안내</span></a>
+                                <ul class="depth2">
+                                    
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="/page/2128" target="">
+                                                        
+                                                        
+                                                            선발기준
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="/page/2129" target="">
+                                                        
+                                                        
+                                                            입/퇴사 안내
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        </ul>
+                        </li>
+                        
+                        
+                        
+                        <li class="parent_li " >
+                            
+                            
+                                
+                                <a href="#" target="">
+                                    
+                                    
+                                    <span>공지/안내사항</span></a>
+                                <ul class="depth2">
+                                    
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                            <a href="/article/notice/list" target="">
+                                                
+                                                
+                                                    
+                                                        
+                                                            공지사항
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                            <a href="/article/form/list" target="">
+                                                
+                                                
+                                                    
+                                                        
+                                                            각종신청양식
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                            <a href="/article/food/list" target="">
+                                                
+                                                
+                                                    
+                                                        
+                                                            주간식단표
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                            <a href="/article/faq/list" target="">
+                                                
+                                                
+                                                    
+                                                        
+                                                            FAQ
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="https://www.dongguk.edu/qna/list" target="_blank">
+                                                        
+                                                        
+                                                            Q&A
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                            
+                        
+                                    
+                                        <li>
+                                            
+                                            
+                                                
+                                                    
+                                                    <a href="https://www.dongguk.edu/minwon/sisul/list" target="_blank">
+                                                        
+                                                        
+                                                            시설민원접수
+                                                    </a>
+                                        </li>
+                                    
+                                    
+                                </ul></li></ul>
+                        <div class="logo"><img src="/resources/site/dorm/resource/images/layout/common/header_logo.png" alt="동국대학교 dongguk university"><span>남산학사</span></div>
+                        <button class="menu_close"><span class="blind">닫기</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+        
+
+        <!-- sub_container -->
+        <div id="sub_container">
+            
+
+
+
+
+<script type="text/javascript">
+    function fn_openMenu(e){
+        if($(e).hasClass('active')){
+            $(e).next().hide();
+            $(e).removeClass('active');
+        }else{
+            $(e).next().show();
+            $(e).addClass('active');
+        }
+    }
+
+    // 해당 메뉴로 이동
+    function fn_goMenu(menu_seq){
+        switch (menu_seq){
+
+        }
+    }
+</script>
+<script>
+    $(document).ready(function () {
+
+        var hasDepth4 = false;
+        var depth4 = "<div class='menu_tabs'><div class='depth4'><ul>";
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        depth4 += '</div></ul></div>';
+        if (hasDepth4) {
+            // 글 상세/작성 form 에서는 탭 미노출
+            if($('.board_write').length == 0 && $('.board_view').length == 0 && $('.secret_box').length == 0){
+                $('.contents:first').prepend(depth4);
+            }
+        }
+
+        var hasDepth3 = false;
+        var depth3 = "<div class='menu_tabs'><div class='depth3'><ul>";
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        depth3 += '</div></ul></div>';
+        if (hasDepth3) {
+            // 글 상세/작성 form 에서는 탭 미노출
+            if($('.board_write').length == 0 && $('.board_view').length == 0 && $('.secret_box').length == 0){
+                $('.contents:first').prepend(depth3);
+            }
+        }
+
+        switch ($('.snb_wrap .snb ul .depth .active').index()){
+            case 0:
+                $('.sub_visual01').addClass('change1');
+                break;
+            case 1:
+                $('.sub_visual01').addClass('change1');
+                break;
+            case 2:
+                $('.sub_visual01').addClass('change2');
+                break;
+            case 3:
+                $('.sub_visual01').addClass('change3');
+                break;
+            case 4:
+                $('.sub_visual01').addClass('change4');
+                break;
+            case 5:
+                $('.sub_visual01').addClass('change1');
+                break;
+            case 6:
+                $('.sub_visual01').addClass('change6');
+                break;
+            case 7:
+                $('.sub_visual01').addClass('change1');
+                break;
+            case 8:
+                $('.sub_visual01').addClass('change7');
+                break;
+            case 9:
+                $('.sub_visual01').addClass('change8');
+                break;
+            case 10:
+                $('.sub_visual01').addClass('change5');
+                break;
+            case 11:
+                $('.sub_visual01').addClass('change9');
+                break;
+            default:
+
+        }
+
+    });
+</script>
+<!-- left_menu -->
+<div class="snb_wrap">
+    <div class="snb">
+        
+            
+            
+                <ul>
+                    <li class="home"><a href="/main"><span class="blind">홈</span></a></li>
+
+                    
+                        
+                            <li class="depth" >
+                                <a href="#" title="펼치기">
+                                      <span>
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                                  공지/안내사항
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                      </span>
+                                </a>
+                                <ul style="display: none" class="first">
+                                    
+                                        
+                                            
+                                                
+                                                
+                                                    <li class=""><a href="/page/2119" target="">남산학사소개</a></li>
+                                                
+                                            
+                                        
+                                    
+                                        
+                                            
+                                                
+                                                
+                                                    <li class=""><a href="/page/2123" target="">내외부전경</a></li>
+                                                
+                                            
+                                        
+                                    
+                                        
+                                            
+                                                
+                                                
+                                                    <li class=""><a href="/page/2126" target="">사생생활안내</a></li>
+                                                
+                                            
+                                        
+                                    
+                                        
+                                            
+                                                
+                                                
+                                                    <li class=""><a href="/article/notice/detail/65087" target="">Dorm Info</a></li>
+                                                
+                                            
+                                        
+                                    
+                                        
+                                            
+                                                
+                                                
+                                                    <li class=""><a href="/page/2128" target="">선발 및 입/퇴사 안내</a></li>
+                                                
+                                            
+                                        
+                                    
+                                        
+                                            
+                                                
+                                                    <li class="active"><a href="/article/notice/list" target="">공지/안내사항</a></li>
+                                                
+                                                
+                                            
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                </ul>
+                            </li>
+                        
+                    
+                        
+                            <li class="depth" id="depth2">
+                                <a href="#" title="펼치기">
+                                      <span>
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                                  주간식단표
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                              
+                                          
+                                      </span>
+                                </a>
+                                <ul style="display: none" class="first">
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                            
+                                                
+                                                    <li class=""><a href="/article/notice/list" target="">공지사항</a></li>
+                                                
+                                                
+                                            
+                                        
+                                    
+                                        
+                                            
+                                                
+                                                    <li class=""><a href="/article/form/list" target="">각종신청양식</a></li>
+                                                
+                                                
+                                            
+                                        
+                                    
+                                        
+                                            
+                                                
+                                                    <li class="active"><a href="/article/food/list" target="">주간식단표</a></li>
+                                                
+                                                
+                                            
+                                        
+                                    
+                                        
+                                            
+                                                
+                                                    <li class=""><a href="/article/faq/list" target="">FAQ</a></li>
+                                                
+                                                
+                                            
+                                        
+                                    
+                                        
+                                            
+                                                
+                                                
+                                                    <li class=""><a href="https://www.dongguk.edu/qna/list" target="_blank">Q&A</a></li>
+                                                
+                                            
+                                        
+                                    
+                                        
+                                            
+                                                
+                                                
+                                                    <li class=""><a href="https://www.dongguk.edu/minwon/sisul/list" target="_blank">시설민원접수</a></li>
+                                                
+                                            
+                                        
+                                    
+                                </ul>
+                            </li>
+                        
+                    
+                </ul>
+            
+        
+    </div>
+</div>
+<!--// left_menu -->
+            <!--contents-->
+            <div id="contents">
+                
+
+
+<div class="sub_top">
+    
+    <div class="location">
+        
+        
+        
+
+        
+        
+    </div>
+</div>
+
+<div class="subpage_top">
+    <h2 class="page_tit">
+        
+            
+            
+                주간식단표
+            
+        </h2>
+    <ul class="util">
+        <li class="print"><a href="javascript:$('.contents').printThis(); void 0;" title="프린트"><span class="blind">인쇄</span></a></li>
+        <li class="share"><a href="#" title="공유"><span class="blind">공유</span></a>
+            <div class="social">
+                <a class="share_icon facebook" href="javascript:shareSNS('facebook');" title="새창열림"><span class="blind">페이스북 공유하기</span></a>
+                <a class="share_icon twitter" href="javascript:shareSNS('twitter');" title="새창열림"><span class="blind">트위터 공유하기</span></a>
+                
+            </div>
+        </li>
+    </ul>
+</div>
+                <!--컨텐츠영역-->
+                <div class="contents">
+                    
+
+
+
+
+
+
+<script>
+
+    function boardEdit(flag){
+        $("#flag").val(flag);
+        $('#articleFrm').submit();
+    }
+
+    function boardEditCheck(flag){
+        $("#flag").val(flag);
+        $('[name=articleFrm]').attr('action', '/article/food/checkpwd');
+        $('#articleFrm').submit();
+    }
+
+
+    function boardDel(){
+        if(confirm("게시글을 삭제하시겠습니까?")){
+            $('[name=flag]').val('d');
+            $('[name=articleFrm]').attr('action', '/article/food/proc');
+            $('#articleFrm').submit();
+        }
+    }
+
+</script>
+<form id="articleFrm" name="articleFrm" action="/article/food/form" method="post" enctype="multipart/form-data">
+    <input id="article_seq" name="article_seq" type="hidden" value="215215"/>
+    <input id="prt_seq" name="prt_seq" type="hidden" value="215215"/>
+    <input id="pageIndex" name="pageIndex" type="hidden" value="1"/>
+    <input id="flag" name="flag" type="hidden" value=""/>
+    <input id="searchCondition" name="searchCondition" type="hidden" value=""/>
+    <input id="searchKeyword" name="searchKeyword" type="hidden" value=""/>
+<div>
+</div></form>
+
+
+
+
+
+<div class="board_view">
+    <div class="tit">
+
+        <p>동국대학교 남산학사 기숙사식당 주간 식단표 9월 5주차 (26.09.28~26.10.02)</p>
+        <div class="info">
+            
+            
+                <span>등록일 2026-09-23</span>
+
+                <span>작성자 관리자</span>
+                <span>조회 2518</span>
+                
+            
+        </div>
+    </div>
+    
+        
+            <div class="view_files">
+                <ul>
+                    
+                        <li><a href="/cmmn/fileDown.do?filename=260928+%EC%A3%BC%EA%B0%84%EB%A9%94%EB%89%B4%ED%91%9C.pdf&filepath=/dorm/files/article/food/215215/&filerealname=4F004846FF7E4529BE2BAEFE8E9D63DF.pdf ">260928 주간메뉴표.pdf</a></li>
+                    
+                </ul>
+            </div>
+        
+    
+    <div class="view_cont">
+        <p><img alt="1" src="/cmmn/fileView?path=/ckeditor//food&amp;physical=1790128846944.png&amp;contentType=image" style="width: 1017px; height: 753px;" /></p>
+
+    </div>
+
+
+    
+        <div class="view_more">
+            <ul>
+                <li class="prev">
+                    
+                        <a href="/article/food/detail/215038?pageIndex=1&searchCondition=&searchKeyword=&category_cd=">
+                            <span class="icon"></span>
+                            <span>이전글</span>
+                            <p>동국대학교 남산학사 기숙사식당 주간 식단표 9월 4주차 (26.09.21~26.09.25)</p>
+                        </a>
+                    
+                    
+                </li>
+                <li class="next">
+                    
+                        <a href="/article/food/detail/215423?pageIndex=1&searchCondition=&searchKeyword=&category_cd=">
+                            <span class="icon"></span>
+                            <span>다음글</span>
+                            <p>동국대학교 남산학사 기숙사식당 주간 식단표 10월 1주차 (26.10.05~26.10.09)</p>
+                            <span class="ico"></span>
+                        </a>
+                    
+                    
+                </li>
+            </ul>
+        </div>
+    
+    <!-- 버튼 -->
+    <div class="view_btn">
+        
+        
+        
+        
+        <a href="/article/food/list?pageIndex=1&searchCondition=&searchKeyword=&category_cd="
+           class="btn">목록</a>
+    </div>
+    <!--// 버튼 -->
+
+</div>
+
+
+                </div>
+                <!--//컨텐츠영역-->
+            </div>
+            <!--contents-->
+        </div>
+        <!-- sub_container -->
+
+        
+
+
+
+
+<script>
+    $(document).ready(function() {
+        var menu_up_down = 1;
+        $("#foot_quick").click(function () {
+            if (menu_up_down == 1) {
+                $("#lmenu").animate({height: "328px"});
+                menu_up_down = 0;
+            } else {
+                $("#lmenu").animate({height: "0px"});
+                menu_up_down = 1;
+            }
+        });
+
+
+    });
+</script>
+
+<!--footer-->
+<a href="#" id="scroll" style="display: none;"><i>TOP</i></a>
+<div class="footer">
+    <div class="ft_top">
+        <ul>
+            <li class="on"><a href="https://www.dongguk.edu/page/534" target="_blank">개인정보처리방침</a></li>
+        </ul>
+    </div>
+    <div class="inner">
+        <div class="ft_bottom">
+            <div class="ftb_left">
+            <span class="ft_logo">
+                <img src="/resources/site/dorm/resource/images/layout/common/footer_logo.png" alt="">
+            </span>
+                <div class="txt">
+                    <p class="address"><span>(04620) 서울특별시 중구 필동로 1길 30 동국대학교  남산학사</span><br><span>Tel : 02-2260-4932~3</span> <span>E-mail : dorm@dongguk.edu</span></p>
+                    <p class="copyright">COPYRIGHT(C) DONGGUK UNIVERSITY</p>
+                </div>
+            </div>
+            <div class="ft_sns">
+                <a href="#" target="_blank" title="새창열림" class="youtube"><span class="blind">유튜브</span></a>
+                <a href="#" target="_blank" title="새창열림" class="facebook"><span class="blind">페이스북</span></a>
+                <a href="#" target="_blank" title="새창열림" class="twitter"><span class="blind">트위터</span></a>
+                <a href="#" target="_blank" title="새창열림" class="insta"><span class="blind">인스타그램</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//footer-->
+</div>
+<!--//wrap-->
+</body>
+</html>

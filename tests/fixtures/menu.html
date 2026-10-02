@@ -1,0 +1,3114 @@
+<html>
+ <head>
+
+  <title>동국대학교소비자생활협동조합</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+ <meta http-equiv="Expires" content="Mon, 06 Jan 1990 00:00:01 GMT"> 
+<meta http-equiv="Expires" content="-1"> 
+<meta http-equiv="Pragma" content="no-cache"> 
+<meta http-equiv="Cache-Control" content="no-cache">
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothic.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
+  <link href="/lib/css.css" rel="Stylesheet" style="text/css">
+  <link href="/lib/dgucoop.css" rel="Stylesheet" style="text/css">
+  <script type="text/javascript" src="/lib/ajax.js"></script>
+   <script type="text/javascript" src="/lib/dnd.js"></script>
+  <script type="text/javascript" src="/lib/insjs.js"></script>
+  <script type="text/javascript" src="/nbs/lib/nbs_js.js"></script>
+  <script type="text/javascript" src="/nbs/lib/editor.js"></script>
+  <script>
+if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/(up.browser|up.link|mmp|symbian|smartphone|midp|wap|vodafone|o2|pocket|kindle|mobile|pda|psp|treo)/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/opera mini/i)) || (navigator.userAgent.match(/blackberry/i)) || (navigator.userAgent.match(/(palm os|palm|hiptop|avantgo|plucker|xiino|blazer|elaine)/i)) || (navigator.userAgent.match(/(windows ce; ppc;|windows ce; smartphone;|windows ce; iemobile)/i)) || (navigator.userAgent.match(/android/i))) {
+if (document.cookie.indexOf("iphone_redirect=false") == -1) window.location = "http://dgucoop.dongguk.edu/mobile/";
+}
+</script>
+<script language="javascript">
+<!--
+function nfConfirm(msg,foc){
+	var divTop = Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+	var divLeft = Math.max(document.documentElement.scrollLeft,document.body.scrollLeft);
+	var divWid = Math.max(document.documentElement.clientWidth,document.body.clientWidth);
+	var divHei = Math.max(document.documentElement.clientHeight,document.body.clientHeight);
+	var msgTop = divTop+200;
+	var msgLeft= divLeft;
+	//var msgTop=Math.floor(getBrowser/3)+divTop;
+	//var msgTop=divHei;
+	if(foc){
+		var btn='<input type="button" value="&nbsp;&nbsp;&nbsp;확인&nbsp;&nbsp;&nbsp;" style="cursor:pointer" onclick='+foc+'>&nbsp;&nbsp;&nbsp;';
+		btn+='<input type="button" value="&nbsp;&nbsp;&nbsp;취소&nbsp;&nbsp;&nbsp;" style="cursor:pointer" onclick="nfAlertClose();">';
+		document.getElementById('altBtn').innerHTML=btn;
+	}
+	document.getElementById('altMsg').innerHTML=msg;
+	document.getElementById('nBlind').style.width=divWid+"px";
+	document.getElementById('nBlind').style.height=divHei+"px";
+	document.getElementById('nfMsg').style.top=msgTop+"px";
+	document.getElementById('nfMsg').style.left=msgLeft+"px";
+	document.getElementById('loadAlt').style.display="none";
+	document.getElementById('nBlind').style.display="block";
+	document.getElementById('nfMsg').style.display="block";
+}
+function nfFunc(msg,foc){
+	var divTop = Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+	var divLeft = Math.max(document.documentElement.scrollLeft,document.body.scrollLeft);
+	var divWid = Math.max(document.documentElement.clientWidth,document.body.clientWidth);
+	var divHei = Math.max(document.documentElement.clientHeight,document.body.clientHeight);
+	var msgTop = divTop+200;
+	var msgLeft= divLeft;
+	//var msgTop=Math.floor(getBrowser/3)+divTop;
+	//var msgTop=divHei;
+	if(foc){
+		var btn='<input type="button" value="&nbsp;&nbsp;&nbsp;확인&nbsp;&nbsp;&nbsp;" style="cursor:pointer" onclick='+foc+'>&nbsp;&nbsp;&nbsp;';
+		document.getElementById('altBtn').innerHTML=btn;
+	}
+	document.getElementById('altMsg').innerHTML=msg;
+	document.getElementById('nBlind').style.width=divWid+"px";
+	document.getElementById('nBlind').style.height=divHei+"px";
+	document.getElementById('nfMsg').style.top=msgTop+"px";
+	document.getElementById('nfMsg').style.left=msgLeft+"px";
+	document.getElementById('loadAlt').style.display="none";
+	document.getElementById('nBlind').style.display="block";
+	document.getElementById('nfMsg').style.display="block";
+}
+function nfAlert(msg,foc,foc2){
+	
+	var brHeight=Math.max(document.body.clientHeight,window.innerHeight);
+	var brWidth=Math.max(document.body.clientWidth,window.innerWidth);
+	var divTop = Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+	var divLeft = Math.max(document.documentElement.scrollLeft,document.body.scrollLeft);
+	var divWid = Math.max(document.documentElement.clientWidth,document.body.clientWidth);
+	var divHei = Math.max(document.documentElement.clientHeight,document.body.clientHeight);
+	//var avh=document.getElementById('mainTb').style.height;
+	var msgTop = divTop+200;
+	var msgLeft= divLeft;
+	var rhei=divTop+divHei;
+	//var msgTop=Math.floor(getBrowser/3)+divTop;
+	//var msgTop=divHei;
+	if(foc && foc2){
+		if(foc=="ID"){
+			document.getElementById('altBtn').innerHTML='<input type="button" value="&nbsp;&nbsp;&nbsp;확인&nbsp;&nbsp;&nbsp;" style="cursor:pointer" onclick=nfAlertCloseID("'+foc2+'")>';
+		}
+		else{
+			document.getElementById('altBtn').innerHTML='<input type="button" value="&nbsp;&nbsp;&nbsp;확인&nbsp;&nbsp;&nbsp;" style="cursor:pointer" onclick="nfAlertClose('+foc+');">';
+		}
+	}
+	else if(foc && foc2==""){
+		document.getElementById('altBtn').innerHTML='<input type="button" value="&nbsp;&nbsp;&nbsp;확인&nbsp;&nbsp;&nbsp;" style="cursor:pointer" onclick="nfAlertClose(foc);">';
+	}
+	else if(foc2){
+		document.getElementById('altBtn').innerHTML='<input type="button" value="&nbsp;&nbsp;&nbsp;확인&nbsp;&nbsp;&nbsp;" style="cursor:pointer" onclick=nfAlertClose2("'+foc2+'")>';
+	}
+	document.getElementById('altMsg').innerHTML=msg;
+	
+	document.getElementById('nBlind').style.width=divWid+"px";
+	document.getElementById('nBlind').style.height=rhei+"px";
+	document.getElementById('nfMsg').style.top=msgTop+"px";
+	document.getElementById('nfMsg').style.left=msgLeft+"px";
+	document.getElementById('loadAlt').style.display="none";
+	document.getElementById('nBlind').style.display="block";
+	document.getElementById('nfMsg').style.display="block";
+	
+}
+function nfAlertClose(foc){
+	if(foc){
+		foc.focus();
+	}
+	document.getElementById('nBlind').style.display="none";
+	document.getElementById('nfMsg').style.display="none";
+}
+function nfAlertClose2(foc){
+	if(foc){
+		var f=document.getElementsByName(foc);
+		f[0].focus();
+	}
+	document.getElementById('nBlind').style.display="none";
+	document.getElementById('nfMsg').style.display="none";
+}
+function nfAlertCloseID(foc){
+	if(foc){
+		var f=document.getElementById(foc);
+		f.focus();
+	}
+	document.getElementById('nBlind').style.display="none";
+	document.getElementById('nfMsg').style.display="none";
+}
+function nfAlertM(msg,loc){
+	var brHeight=Math.max(document.body.clientHeight,window.innerHeight);
+	var brWidth=Math.max(document.body.clientWidth,window.innerWidth);
+	var divTop = Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+	var divLeft = Math.max(document.documentElement.scrollLeft,document.body.scrollLeft);
+	var divWid = Math.max(document.documentElement.clientWidth,document.body.clientWidth);
+	var divHei = Math.max(document.documentElement.clientHeight,document.body.clientHeight);
+	var avh=Math.max(document.documentElement.availHeight,document.body.availHeight);
+	var msgTop = divTop+200;
+	var msgLeft= divLeft;
+	var rhei=divTop+divHei;
+	//var msgTop=Math.floor(getBrowser/3)+divTop;
+	//var msgTop=divHei;
+	document.getElementById('altBtn').innerHTML='<input type="button" value="&nbsp;&nbsp;&nbsp;확인&nbsp;&nbsp;&nbsp;" style="cursor:pointer" onclick=nfAlertMClose("'+loc+'")>';
+	document.getElementById('altMsg').innerHTML=msg;
+	document.getElementById('nBlind').style.height=divHei+"px";
+	document.getElementById('nfMsg').style.top=msgTop+"px";
+	document.getElementById('nfMsg').style.left=msgLeft+"px";
+	document.getElementById('loadAlt').style.display="none";
+	document.getElementById('nBlind').style.display="block";
+	document.getElementById('nfMsg').style.display="block";
+}
+function nfAlertMClose(loc){
+	window.location.href=loc;
+	document.getElementById('nBlind').style.display="none";
+	document.getElementById('nfMsg').style.display="none";
+}
+function nfAlertForm(msg,foc){
+	var divTop = Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+	var divLeft = Math.max(document.documentElement.scrollLeft,document.body.scrollLeft);
+	var divWid = Math.max(document.documentElement.clientWidth,document.body.clientWidth);
+	var divHei = Math.max(document.documentElement.clientHeight,document.body.clientHeight);
+	var msgTop = divTop+200;
+	var msgLeft= divLeft;
+	
+	document.getElementById('altBtn').innerHTML='<input type="button" value="&nbsp;&nbsp;&nbsp;확인&nbsp;&nbsp;&nbsp;" style="cursor:pointer" onclick=nfAlertCloseForm("'+foc+'")>';
+	document.getElementById('altMsg').innerHTML=msg;
+	document.getElementById('nBlind').style.width=divWid+"px";
+	document.getElementById('nBlind').style.height=divHei+"px";
+	document.getElementById('nfMsg').style.top=msgTop+"px";
+	document.getElementById('nfMsg').style.left=msgLeft+"px";
+	document.getElementById('loadAlt').style.display="none";
+	document.getElementById('nBlind').style.display="block";
+	document.getElementById('nfMsg').style.display="block";
+}
+function nfAlertCloseForm(foc){
+	document.foc.submit();
+}
+//텍스트 입력 제한
+function text_specialCheck(id,info,lang){
+	var ln=document.getElementById(id).value.length;
+	var val="";
+	var ac=0;
+	for(i=0;i<ln;i++){
+		var ch=document.getElementById(id).value.charAt(i);
+		if(lang=="kr"){
+			if(ch==" " || ch=="-" || ch=="_" || ch<"ㄱ" || ch>=0 || ch=="~" || ch=="'" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//alert(val);
+				alert(info+'에는 영문,숫자,특수문자,공란을 사용할 수 없습니다.');
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="kr_no"){
+			if(( ch<"ㄱ" && ch>="a" ) || ch==" " || ch=="-" || ch=="_" || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//alert(val);
+				alert(info+'에는 영문,특수문자,공란을 사용할 수 없습니다.');
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="kr_en_no"){
+			if(ch==" " || ch=="-" || ch=="_" || ch=="~" || ch=="'"  || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//alert(val);
+				alert(info+'에는 한글, 영문, 숫자만 사용가능합니다.');
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="en_no"){
+			if(ch==" " || ch=="-" || ch=="_" || ch>"z" || ch=="~" || ch=="'" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//alert(val);
+				alert(info+'에는 영문, 숫자만 사용가능합니다.');
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="en"){
+			if(ch==" " || ch=="-" || ch=="_" || ch>"z" || ch>=0 || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//alert(val);
+				alert(info+'에는 한글,숫자,특수문자,공란을 사용할 수 없습니다.');
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="no"){
+			if(ch==" " || ch=="-" || ch=="_" || ch>="a" || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//alert(val);
+				alert(info+'에는 한글,영문,특수문자,공란을 사용할 수 없습니다.');
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="null_base"){
+			if(ch==" " || ch=="-" || ch=="_" || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//alert(val);
+				alert(info+'에는 특수문자,공란을 사용할 수 없습니다.');
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="sp_base2"){
+			if(ch=="`" || ch==" " || ch=="$" || ch=="#" || ch=="%" || ch=="\\" || ch=="\""){
+				//alert(val);
+				alert(info+'에는 「 공란 ` # $ \ " 」을 사용할 수 없습니다.');
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="email"){
+			
+			if(ch=="@"){
+				ac=ac+1;
+			}
+			if(ch==" " || ac>1 || ch>"z" || ch=="~" || ch=="`" || ch=="!" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="?" || ch=="/"){
+				//alert(val);
+				alert(info+' 형식에 어긋납니다.');
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+	}
+}
+function text_specialCheck2(id,info,lang){
+	var ln=document.getElementById(id).value.length;
+	var txt=document.getElementById(id).value;
+	var val="";
+	var ac=0;
+	var dotCnt=0;
+	for(i=0;i<ln;i++){
+		var ch=document.getElementById(id).value.charAt(i);
+		if(lang=="kr"){
+			if(ch==" " || ch=="-" || ch=="_" || ch<"ㄱ" || ch>=0 || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//alert(val);
+				nfAlert(info+'에는 한글만 사용할 수 있습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="kr_no"){
+			if((ch<"ㄱ" && ch>="a") || ch==" " || ch=="-" || ch=="_" || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//alert(val);
+				nfAlert(info+'에는 한글과 숫자만 사용할 수 있습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="kr_en_no"){
+			if(ch==" " || ch=="-" || ch=="_" || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//nfAlert(val);
+				nfAlert(info+'에는 특수문자,공란을 사용할 수 없습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="en_no"){
+			if(ch==" " || ch=="-" || ch=="_" || ch>"z" || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//alert(val);
+				document.getElementById(id).value=val;
+				nfAlert(info+'에는 영문과 숫자만 사용할 수 있습니다.','ID',id);
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="en"){
+			if(ch==" " || ch=="-" || ch=="_" || ch>"z" || ch>=0 || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//nfAlert(val);
+				nfAlert(info+'에는 영문만 사용할 수 있습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="kr_en_space"){
+			if(ch=="-" || ch=="_" || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/" || ch>0 || ch=="0"){
+				//nfAlert(val);
+				nfAlert(info+'에는 한글, 영문, 공란만 사용할 수 있습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="en_space"){
+			if(ch=="-" || ch=="_" || ch>"z" || ch>0 || ch=="0" || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//nfAlert(val);
+				nfAlert(info+'에는 영문과 띄어쓰기만 사용할 수 있습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="no"){
+			if(ch==" " || ch=="-" || ch=="_" || ch>="a" || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//nfAlert(val);
+				nfAlert(info+'에는 숫자만 사용할 수 있습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="no_dot"){
+			if(ch=="."){
+				dotCnt++;
+			}
+			if(ch==" " || ch=="-" || ch=="_" || ch>="a" || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="?" || ch=="/" || dotCnt>1){
+				//nfAlert(val);
+				nfAlert(info+'에는 숫자를 사용하실 수 있으며 「소수점. 」은 한번만 사용할 수 있습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="no_rest"){
+			if(ch=="."){
+				dotCnt++;
+			}
+			if(ch==" " || ch=="-" || ch=="_" || ch>="a" || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="." || ch=="?" || ch=="/"){
+				//nfAlert(val);
+				nfAlert(info+'에는 숫자와 쉼표(,) 사용할 수 있습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="manaT"){
+			if(ch==" " || ch=="-" || ch=="_" || ch>="a" || ch=="~" || ch=="'" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//nfAlert(val);
+				nfAlert(info+'에는 숫자와 「:」 을 사용할 수 있습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="manaDot"){
+			if(ch==" " || ch=="-" || ch=="_" || ch>="a" || ch=="~" || ch=="'" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":"  || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="?" || ch=="/"){
+				//nfAlert(val);
+				nfAlert(info+'에는 숫자와 「.」 을 사용할 수 있습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="null_base"){
+			if(ch==" " || ch=="-" || ch=="_" || ch=="~" || ch=="`" || ch=="!" || ch=="@" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/"){
+				//nfAlert(val);
+				nfAlert(info+'에는 특수문자,공란을 사용할 수 없습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="sp_base2"){
+			if(ch=="'" || ch==" " || ch=="$" || ch=="#" || ch=="%" || ch=="\\" || ch=="\""){
+				//nfAlert(val);
+				nfAlert(info+'에는 「 공란 \` # $ \\ \" 」을 사용할 수 없습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="email"){
+			if(ch=="@"){
+				if(i==0){
+					var atErr="err";
+				}
+			}
+			if(ch=="."){
+				if(document.getElementById(id).value.charAt(i-1)=="@"){
+					var atErr="err";
+				}
+				if(document.getElementById(id).value.charAt(i-1)=="."){
+					var dotErr="err";
+				}
+			}
+			if(ch=="@"){
+				ac=ac+1;
+			}
+			if(ch==" " || (ac==0 && ch==".") || atErr=="err" || ac>1 || dotErr=="err" || ch>"z" || ch=="~" || ch=="`" || ch=="!" || ch=="#" || ch=="$" || ch=="%" || ch=="^" || ch=="&" || ch=="*" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="?" || ch=="/"){
+				//alert(val);
+				nfAlert(info+' 형식에 어긋납니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="coding"){
+			if(ch=="\"" || ch=="\\"){
+				nfAlert(info+"에는 \" \\를 사용하실 수 없습니다.",'ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+		if(lang=="pass"){
+			if(ch==" " || ch=="-" || ch=="_" || ch>"z" || ch=="~" || ch=="`" || ch=="(" || ch==")" || ch=="+" || ch=="=" || ch=="|" || ch=="\\" || ch=="\"" || ch=="{" || ch=="}" || ch=="[" || ch=="]" || ch==":" || ch==";" || ch=="<" || ch==">" || ch=="," || ch=="." || ch=="?" || ch=="/" || ch=="$"  || ch=="&" || ch=="!"){
+				//nfAlert(val);
+				nfAlert(info+'에는 영문,숫자 및 @,#,%,^,* 만을 사용하실 수 있습니다.','ID',id);
+				document.getElementById(id).value=val;
+				document.getElementById(id).focus();
+				return false;
+			}
+			else{
+				val=val+ch;
+			}
+		}
+	}
+}
+function juminCheck(jua,jub){
+	var mon=parseInt(jua.substring(2,4));
+	var il=parseInt(jua.substring(4,6));
+	var yon="20"+jua.substring(0,2);
+		lastid	= parseInt(jub.substring(6,7));
+		value0  = parseInt(jua.substring(0,1))  * 2;
+		value1  = parseInt(jua.substring(1,2))  * 3;
+		value2  = parseInt(jua.substring(2,3))  * 4;
+		value3  = parseInt(jua.substring(3,4))  * 5;
+		value4  = parseInt(jua.substring(4,5))  * 6;
+		value5  = parseInt(jua.substring(5,6))  * 7;
+		value6  = parseInt(jub.substring(0,1))  * 8;
+		value7  = parseInt(jub.substring(1,2))  * 9;
+		value8  = parseInt(jub.substring(2,3))  * 2;
+		value9  = parseInt(jub.substring(3,4))  * 3;
+		value10 = parseInt(jub.substring(4,5))  * 4;
+		value11 = parseInt(jub.substring(5,6))  * 5;		
+		val = value0+value1+value2+value3+value4+value5+value6+value7+value8+value9+value10+value11 ;		
+		li_mod = val % 11;
+		li_minus = 11 - li_mod;
+		li_last = li_minus % 10;
+	var lastDate = new Array(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+	if((yon%4==0 && yon%100!=0) || yon%400==0){
+		lastDate[2]=29;
+	}
+	if(jua.length>=4){
+		if(parseInt(jua.substring(2,4))<1 || parseInt(jua.substring(2,4))>12){
+			nfAlert('주민번호를 정확히 입력해 주세요.','ID','jumin1');
+			document.getElementById('jumin1').value=jua.substring(0,2);
+			return false;
+		}
+	}
+	if(jua.length==5){
+		if(parseInt(jua.substring(4,5))>3){
+			nfAlert('주민번호를 정확히 입력해 주세요.','ID','jumin1');
+			document.getElementById('jumin1').value=jua.substring(0,4);
+			return false;
+		}
+	}
+	if(jua.length==6){
+		if(il<1 || il>lastDate[mon]){
+			nfAlert('주민번호를 정확히 입력해 주세요.','ID','jumin1');
+			document.getElementById('jumin1').value=jua.substring(0,4);
+			return false;
+		}
+	}
+	if(jub.length>0){
+		if(parseInt(jub.substring(0,1))>4 || parseInt(jub.substring(0,1))<1){
+			nfAlert('주민번호를 정확히 입력해 주세요.<br><span style="color:#0070a6;">재외국인인 경우 재외국인을 체크한 후 입력하세요.</span>','ID','jumin2');
+			document.getElementById('jumin2').value="";
+			return false;
+		}
+	}
+	if(jua.length==6 && jub.length==7){
+		if(li_last!=lastid){
+			nfAlert('주민번호를 정확히 입력해 주세요.','ID','jumin2');
+			document.getElementById('jumin2').value="";
+			return false;
+		}
+		var params="jua="+jua+"&jub="+jub+"&con=1";
+		new ajax.xhr.Request('/nbs/inner/jumincheck.php',params,reJuminCheck,'GET');		
+	}
+}
+function fgnoCheck(jua,jub){
+	var mon=parseInt(jua.substring(2,4));
+	var il=parseInt(jua.substring(4,6));
+	var yon="20"+jua.substring(0,2);
+	var lastDate = new Array(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+	if((yon%4==0 && yon%100!=0) || yon%400==0){
+		lastDate[2]=29;
+	}
+	if(jua.length>=4){
+		if(parseInt(jua.substring(2,4))<1 || parseInt(jua.substring(2,4))>12){
+			nfAlert('재외국인번호를 정확히 입력해 주세요.','ID','fgno1');
+			document.getElementById('fgno1').value=jua.substring(0,2);
+			return false;
+		}
+	}
+	if(jua.length==5){
+		if(parseInt(jua.substring(4,5))>3){
+			nfAlert('재외국인번호를 정확히 입력해 주세요.','ID','fgno1');
+			document.getElementById('fgno1').value=jua.substring(0,4);
+			return false;
+		}
+	}
+	if(jua.length==6){
+		if(il<1 || il>lastDate[mon]){
+			nfAlert('재외국인번호를 정확히 입력해 주세요.','ID','fgno1');
+			document.getElementById('fgno1').value=jua.substring(0,4);
+			return false;
+		}
+	}
+	if(jub.length>0){
+		if(parseInt(jub.substring(0,1))>8 || parseInt(jub.substring(0,1))<5){
+			nfAlert('재외국인번호를 정확히 입력해 주세요.','ID','fgno2');
+			document.getElementById('fgno2').value="";
+			return false;
+		}
+	}
+	if(jua.length==6 && jub.length==7){
+		var fgnno=jua+jub;
+        var sum=0;
+        var odd=0;
+        buf = new Array(13);
+        for(i=0; i<13; i++) { buf[i]=parseInt(fgnno.charAt(i)); }
+        odd = buf[7]*10 + buf[8];
+        if(odd%2 != 0) {
+			nfAlert("재외국인번호가 잘못되었습니다.",'ID',"fgno2");
+			document.getElementById('fgno2').value="";
+			return false; 
+		}
+		if( (buf[6]!=6) && (buf[6]!=7) && (buf[6]!=8) && (buf[6]!=9) ) {
+			nfAlert("재외국인번호가 잘못되었습니다.",'ID',"fgno2");
+			document.getElementById('fgno2').value="";
+            return false;
+        }
+        multipliers = [2,3,4,5,6,7,8,9,2,3,4,5];
+        for(i=0, sum=0; i<12; i++) { sum += (buf[i] *= multipliers[i]); }
+        sum = 11 - (sum%11);
+        if(sum >= 10) { sum -= 10; }
+        sum += 2;
+        if(sum >= 10) { sum -= 10; }
+        if(sum != buf[12]) { 
+			nfAlert("재외국인번호가 잘못되었습니다.",'ID',"fgno2");
+			document.getElementById('fgno2').value="";
+			return false;
+		}
+		var params="jua="+jua+"&jub="+jub+"&con=2";
+		new ajax.xhr.Request('/nbs/inner/jumincheck.php',params,reJuminCheck,'GET');	
+		//같은 회차에 등록된 주민번호 확인, 다른 회차의 주민번호와 등록된 아이디 확인 
+	}
+}
+function reJuminCheck(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			var doc=docXML.split("|");
+			if(doc[1]==1){
+				if(doc[0]==1){
+					document.getElementById('jumin2').value="";
+					nfAlert('가입신청된 주민번호가 존재합니다.','ID','jumin2');
+					return false;
+				}
+				else{
+					document.getElementById('fgno2').value="";
+					nfAlert('가입신청된 재외국인번호가 존재합니다.','ID','fgno2');
+					return false;
+				}
+			}
+			else if(doc[1]==2){
+				if(doc[0]==1){
+					document.getElementById('jumin2').value="";
+					nfAlert('조합원으로 가입중인 주민번호가 존재합니다.','ID','jumin2');
+					return false;
+				}
+				else{
+					document.getElementById('fgno2').value="";
+					nfAlert('조합원으로 가입중인 재외국인번호가 존재합니다.','ID','fgno2');
+					return false;
+				}
+			}	
+		}
+	}
+}
+function hakbunCheck(val){
+	var params="bun="+val;
+	new ajax.xhr.Request('/nbs/inner/hakbuncheck.php',params,reHakbunCheck,'GET');	
+}
+function reHakbunCheck(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var doc=req.responseText;
+			var f=document.joinForm;
+			f.hakbuncheck.value=doc;
+		}
+	}
+}
+function changFg(no){
+	if(no==1){
+		document.getElementById('fg'+1).style.display="block";
+		document.getElementById('fg'+2).style.display="none";
+	}
+	else{
+		document.getElementById('fg'+1).style.display="none";
+		document.getElementById('fg'+2).style.display="block";
+	}
+}
+function nextFocus(obj,ln,nextbox){
+	if(obj.value.length==ln){
+		document.getElementById(nextbox).focus();
+	}
+}
+function maxLengthCheck(object){
+    if (object.value.length > object.maxLength){
+      //object.maxLength : 매게변수 오브젝트의 maxlength 속성 값입니다.
+      object.value = object.value.slice(0, object.maxLength);
+    }    
+}
+function Change_color(no,opa){
+	var view=document.getElementById('pimg'+no);
+	if(opa!=''){
+		ajax.GUI.setOpacity(view,eval(opa));
+	}
+}
+function Change_color2(id,opa){
+	var view=document.getElementById(id);
+	if(opa!=''){
+		ajax.GUI.setOpacity(view,eval(opa));
+	}
+}
+function changeOpa(val,opa){
+	ajax.GUI.setOpacity(val,eval(opa));
+}
+function chk_openpop(url,uid){
+	//var intop=event.clientX;
+	var ruid=uid.value;
+	if(uid.value.length<4 || uid.value.lenght>13){
+		alert('아이디는 4자 이상 12자 이하로 입력하세요')
+		uid.focus();
+		return false;
+	}
+	else{
+		window.open(url+'?uid='+ruid,'','top=300,left=400,width=317,height=200');
+		return true;
+	}
+}
+function chg_xy(e){
+	var event=window.event || e;
+	var stPos=ajax.GUI.getXY(document.getElementById('photo'));
+	var xy=ajax.Event.getMouseXY(event);
+	var intop=xy.y;
+	var inleft=xy.x;
+	var lpos=inleft-stPos.x;
+	var tpos=intop-stPos.y;
+	var wid=document.getElementById('photo').offsetWidth;
+	var hei=document.getElementById('photo').offsetHeight;
+	if(lpos<40 || wid<lpos+40 || tpos<40 || hei<tpos+40){
+		close_mirror('win_board');
+		close_mirror('layer_view');
+	}
+	else{
+		document.getElementById('win_board').style.top=intop-40+"px";
+		document.getElementById('win_board').style.left=inleft-40+"px";
+		document.getElementById('win_board').style.display='block';
+		document.getElementById('layer_view').style.display='block';
+		document.getElementById('zoom_view').contentWindow.scrollTo((lpos-40)*4,(tpos-40)*4);
+		//new ajax.xhr.Request('/goods/winboard.php?sx='+inleft+'&sy='+intop+'&lpos='+lpos+'&tpos='+tpos+'&wid='+wid+'&hei='+hei,'',loadWin,'GET');
+		//new ajax.xhr.Request('/goods/pview.php?sx='+inleft+'&sy='+intop+'&lpos='+lpos+'&tpos='+tpos+'&wid='+wid+'&hei='+hei+'&filename='+filename+'&sizeT='+sizeT+'&msize='+msize,'',loadWin,'GET')
+	}
+}
+function imgAct(file,sizeT){
+	var wid=document.getElementById('photo').offsetWidth;
+	var hei=document.getElementById('photo').offsetHeight;
+	if(wid>hei){
+		var sizX='280px';
+		var sizY=hei*280/wid;
+	}
+	else{
+		var sizY='280px';
+		var sizX=wid*280/hei;
+	}
+	document.getElementById('zoom_view').contentWindow.location.href='zoom.php?filename='+file+'&sizeT='+sizeT+'&msize=280px';
+	document.getElementById('photo').src='/upload/product_file/'+file;
+	document.getElementById('photo').style.width=sizX;
+	document.getElementById('photo').style.height=sizY;
+}
+
+function chg_opt1(fno,pno,typ){
+	var st_type=document.getElementById('stock_type').value;
+	new ajax.xhr.Request('/goods/opt2.php?fno='+fno+'&pno='+pno+'&typ='+typ+'&st_type='+st_type,'',viewOpt2,'GET');
+	new ajax.xhr.Request('/goods/opt_su.php?fno='+fno+'&pno='+pno+'&typ='+typ+'&st_type='+st_type,'',viewOpt4,'GET'); //구매한도체크
+	new ajax.xhr.Request('/goods/opt_price.php?fno='+fno+'&pno='+pno+'&typ='+typ+'&st_type='+st_type,'',viewOpt5,'GET'); //구매가격체크
+}
+function viewOpt2(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			var imgview=document.getElementById('opt2');
+			if(docXML==""){
+				alert('품절된 제품입니다.');//\r\n빠른 시일내에 재입고 되도록 최선을 다하겠습니다.');
+				document.getElementById('opt1_val').options[0].selected=true;
+			}
+			else if(docXML=="1"){
+			}
+			else if(docXML=="2"){
+				alert('품절 되었습니다.');//\r\n빠른 시일내에 재입고 되도록 최선을 다하겠습니다.');
+				document.getElementById('opt1_val').options[0].selected=true;
+				imgview.innerHTML='<select name="opt2_val" onchange="" class="pselect" style="width:150px;"><option selected >선택하세요</option></select>';
+			}
+			else{
+				imgview.innerHTML=docXML;
+			}
+		}
+	}
+}
+function chg_opt2(sno,pno,fno){
+	var st_type=document.getElementById('stock_type').value;
+	new ajax.xhr.Request('/goods/opt3.php?sno='+sno+'&fno='+fno+'&pno='+pno+'&st_type='+st_type,'',viewOpt3,'GET');
+	new ajax.xhr.Request('/goods/opt_su2.php?fno='+fno+'&pno='+pno+'&sno='+sno+'&st_type='+st_type,'',viewOpt4,'GET'); //구매한도체크
+	new ajax.xhr.Request('/goods/opt_price.php?fno='+fno+'&pno='+pno+'&sno='+sno+'&st_type='+st_type,'',viewOpt5,'GET'); //구매가격체크
+}
+function chk_proself(fom){
+	var pno=document.getElementById('pno').value;
+	var fno=document.getElementById('opt1_val').value;
+	var sno=document.getElementById('opt2_val').value;
+	var ea=document.getElementById('ea').value;
+	var st_type=document.getElementById('stock_type').value;
+	if(fno==0){
+		alert('색상을 선택하세요');
+		return false;
+	}
+	if(sno==0){
+		alert('사이즈를 선택하세요');
+		return false;
+	}
+	if(ea==0){
+		alert('수량을 선택하세요');
+		return false;
+	}
+	
+	new ajax.xhr.Request('/goods/in_conf.php?sno='+sno+'&fno='+fno+'&pno='+pno+'&fom='+fom+'&ea='+ea+'&st_type='+st_type,'',moveCooker,'GET');//입출력 확인 및 재고 확인
+}
+function msg_input(val){
+	var uid=document.getElementById('uid').value;
+	var upass=document.getElementById('upass').value;
+	var repass=document.getElementById('repass').value;
+	new ajax.xhr.Request('/member/in_conf.php?uid='+uid+'&upass='+upass+'&repass='+repass+'&val='+val,'',put_wrt,'GET');//입출력 확인 및 재고 확인
+}
+function put_wrt(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			var docA=docXML.substr(0,1);
+			var docB=docXML.substr(1,1);
+			var docC=docXML.substr(2);
+			if(docA==1){
+				msg=document.getElementById('msg_id');
+				msg.innerHTML=docC;
+				document.getElementById('uidval').value=docB;
+				document.getElementById('open_div').value='msg_id';
+			}
+			else if(docA==2){
+				document.getElementById('open_div').value='msg_pass';
+				if(docB==2){
+					msg=document.getElementById('msg_pass');
+					msg.innerHTML=docC;
+					document.getElementById('upassval').value=1;
+					document.getElementById('repassval').value=1;
+				}
+				else if(docB==3){
+					msg=document.getElementById('msg_pass');
+					msg.innerHTML=docC;
+					document.getElementById('upassval').value=1;
+					document.getElementById('repassval').value=0;
+				}
+				else{
+					msg=document.getElementById('msg_pass');
+					msg.innerHTML=docC;
+					document.getElementById('upassval').value=docB;
+					document.getElementById('repassval').value=0;
+				}
+			}
+			else if(docA==3){
+				document.getElementById('open_div').value='msg_rpass';
+				msg=document.getElementById('msg_rpass');
+				msg.innerHTML=docC;
+				document.getElementById('repassval').value=docB;
+			}
+		}
+	}
+}
+function blur_msg(){
+	var val=document.getElementById('open_div').value;
+	//alert(val);
+	document.getElementById(val).innerHTML=" ";
+}
+function moveCooker(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			var ea=document.getElementById('ea').value;
+			if(docXML=="buy"){
+				move_page('/goods/buy_cart.php?buy_type=1&ea='+ea);
+			}
+			else if(docXML=="cart"){
+				move_page('/goods/cart_in.php?buy_type=2&ea='+ea);
+			}
+			else if(docXML=="wish"){
+				move_page('/goods/wish_in.php?buy_type=3&ea='+ea);
+			}
+			else{
+				alert(docXML);
+				window.location.reload();
+			}
+		}
+	}
+}
+function viewOpt3(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			if(docXML==""){
+				alert('품절된 제품입니다.');//\r\n빠른 시일내에 재입고 되도록 최선을 다하겠습니다.');
+				document.getElementById('opt2_val').options[0].selected=true;
+			}
+			else{
+			}
+		}
+	}
+}
+function viewOpt4(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			document.getElementById('stock_su').innerHTML=docXML;
+		}
+	}
+}
+function viewOpt5(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			if(docXML!=""){
+				document.getElementById('view_price').innerHTML=docXML;
+			}
+		}
+	}
+}
+function close_Layer(id){
+	var imgview=document.getElementById(id);
+	imgview.innerHTML='';
+}
+function close_mirror(id){
+	document.getElementById(id).style.display='none';
+}
+function chk_pos(e){
+	var event=window.event || e;
+	var stPos=ajax.GUI.getXY(document.getElementById('photo'));
+	var xy=ajax.Event.getMouseXY(event);
+	var intop=xy.y;
+	var inleft=xy.x;
+	var lpos=inleft-stPos.x;
+	var tpos=intop-stPos.y;
+	var wid=document.getElementById('photo').offsetWidth;
+	var hei=document.getElementById('photo').offsetHeight;
+	if(lpos<40 || wid<lpos+40 || tpos<40 || hei<tpos+40){
+		close_mirror('win_board');
+		close_mirror('layer_view');
+	}
+}
+function chg_viewLayer(e){
+	new ajax.xhr.Request('/goods/pview.php?sx='+inleft+'&sy='+intop+'&lpos='+lpos+'&tpos='+tpos+'&wid='+wid+'&hei='+hei,'',loadPage,'GET')
+}
+function join_conf(){
+	var f=document.form;
+	if (CheckAgree(f.agree,"회원약관 동의"))
+	if (CheckNullValue(f.uname, "이름"))
+	if (check_length(f.jumin1, "주민번호 앞자리","6","6"))
+	if (check_length(f.jumin2, "주민번호 뒷자리","7","7"))
+	if (id_no_chk(f.jumin1,f.jumin2))
+	new ajax.xhr.Request('/my/join_check.php?uname='+f.uname.value+'&jumin1='+f.jumin1.value+'&jumin2='+f.jumin2.value,'',loadRegist,'GET');
+}
+function loadRegist(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			if(docXML==""){
+				document.form.submit();
+			}
+			else{
+				alert(docXML);
+			}
+		}
+	}
+}
+
+function chk_birth(obj1,obj2){
+	var obj1=obj1.replace(/ /gi, "");
+	var obj2=obj2.replace(/ /gi, "");
+	document.getElementById('jumin1').value=obj1;
+	document.getElementById('jumin2').value=obj2;
+	if(obj1.length==6 && obj2.length==7){
+		if(obj2.substr(0,1)<3){
+			var fyear="19";
+		}
+		else{
+			var fyear="20";
+		}
+		var byear=fyear+obj1.substr(0,2);
+		var bmonth=obj1.substr(2,2);
+		var bday=obj1.substr(4,2);
+		document.getElementById('byear').value=byear;
+		document.getElementById('bmonth').value=bmonth;
+		document.getElementById('bday').value=bday;
+		document.getElementById('bday').focus();
+	}
+}
+function null_del(obj){
+	var str=obj.value.replace(/ /gi, "");
+	obj.value=str;
+}
+function conf_move(url,msg){
+	if(confirm(msg)){
+		move_page(url);
+	}
+}
+function conf_out(url,msg){
+	if(confirm(msg)){
+		location.href=url;
+	}
+}
+function move_page(url){
+	document.form.action=url;
+	document.form.submit();
+}
+function ea_plu(){
+	var ea=document.getElementById('ea').value;
+	var stock=document.getElementById('stock').value;
+	if(stock*1>ea*1){
+		document.getElementById('ea').value=(ea*1)+1;
+	}
+	else{
+		alert('제품 재고량이 '+stock+'개 남았습니다\r\n추가 구매를 원하시면 『 바디앤소울』로 문의해 주세요.  \r\n☎ 02 2238 3968');
+	}
+}
+function ea_plu2(i){
+	var ea=document.getElementById('ea'+i).value;
+	var stock=document.getElementById('stock'+i).value;
+	var pno=document.getElementById('pno'+i).value;
+	var opt1_val=document.getElementById('opt1_val'+i).value;
+	var opt2_val=document.getElementById('opt2_val'+i).value;
+	if(stock*1>ea*1){
+		document.getElementById('ea'+i).value=(ea*1)+1;
+		var st=ea*1+1;
+	}
+	else{
+		alert('제품 재고량이 '+stock+'개 남았습니다\r\n추가 구매를 원하시면 『 바디앤소울』로 문의해 주세요.  \r\n☎ 02 2238 3968');
+		var st=stock;
+	}
+	location.href='/goods/cart_in.php?pno='+pno+'&opt1_val='+opt1_val+'&opt2_val='+opt2_val+'&ea='+st;
+}
+function ea_min(){
+	var ea=document.getElementById('ea').value;
+	if(ea>1){
+		document.getElementById('ea').value=(ea*1)-1;
+	}
+}
+function ea_min2(i){
+	var ea=document.getElementById('ea'+i).value;
+	var pno=document.getElementById('pno'+i).value;
+	var opt1_val=document.getElementById('opt1_val'+i).value;
+	var opt2_val=document.getElementById('opt2_val'+i).value;
+	if(ea>1){
+		document.getElementById('ea'+i).value=(ea*1)-1;
+		var st=ea*1-1;
+	}
+	else{
+		var st=ea;
+	}
+	location.href='/goods/cart_in.php?pno='+pno+'&opt1_val='+opt1_val+'&opt2_val='+opt2_val+'&ea='+st;
+}
+function es_zero(stock){
+	var ea=document.getElementById('ea').value*1;
+	var stock=document.getElementById('stock').value*1;
+	if(ea==0 || ea==""){
+		document.getElementById('ea').value=1;
+	}
+	if(ea>stock){
+		alert('제품 재고량이 '+stock+'개 남았습니다\r\추가 구매를 원하시면 『 바디앤소울』로 문의해 주세요.  \r\n☎ 02 2238 3968');
+		document.getElementById('ea').value=stock;
+	}
+	
+}
+function es_zero2(stock,i){
+	var ea=document.getElementById('ea'+i).value*1;
+	var stock=document.getElementById('stock'+i).value*1;
+	var pno=document.getElementById('pno'+i).value;
+	var opt1_val=document.getElementById('opt1_val'+i).value;
+	var opt2_val=document.getElementById('opt2_val'+i).value;
+	if(ea==0 || ea==""){
+		document.getElementById('ea'+i).value=1;
+		var st=1;
+	}
+	if(ea>stock){
+		alert('제품 재고량이 '+stock+'개 남았습니다\r\추가 구매를 원하시면 『 바디앤소울』로 문의해 주세요.  \r\n☎ 02 2238 3968');
+		document.getElementById('ea'+i).value=stock;
+		var st=stock;
+	}
+	else{
+		var st=ea;
+	}
+	location.href='/goods/cart_in.php?pno='+pno+'&opt1_val='+opt1_val+'&opt2_val='+opt2_val+'&ea='+st;
+}
+function chkadd(){
+	if(document.form.chgbox.checked==true){
+		document.form.addressee.value=document.form.buyer.value;
+		document.form.atel1.value=document.form.tel1.value;
+		document.form.atel2.value=document.form.tel2.value;
+		document.form.atel3.value=document.form.tel3.value;
+		document.form.ahp1.value=document.form.hp1.value;
+		document.form.ahp2.value=document.form.hp2.value;
+		document.form.ahp3.value=document.form.hp3.value;
+	}
+	else{
+		document.form.addressee.value='';
+		document.form.atel1.value='';
+		document.form.atel2.value='';
+		document.form.atel3.value='';
+		document.form.ahp1.value='';
+		document.form.ahp2.value='';
+		document.form.ahp3.value='';
+	}
+}
+
+function chgpoint1(){
+	var total=document.form.total_point.value;
+	var pre=document.form.pre_point.value;
+	document.form.use_point.value=pre-total;
+}
+function chgpoint2(){
+	var use=document.form.use_point.value*1;
+	var pre=document.form.pre_point.value*1;
+	if(use>pre){
+		alert('사용적립금은 '+pre+'원을 넘을 수 없습니다.');
+		document.form.use_point.value=0;
+		document.form.total_point.value=pre;
+	}
+	else{
+		document.form.total_point.value=pre-use;
+	}
+}
+function updownMenu(ls,ea,arr){
+	new ajax.xhr.Request('/goods/rtday_view.php?ls='+ls+'&ea='+ea+'&arr='+arr,'',viewrtday,'GET');
+}
+function viewrtday(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			var imgview=document.getElementById('divMenu');
+			imgview.innerHTML=docXML;
+		}
+	}
+}
+function chgBoard(w){
+	for(i=1;i<4;i++){
+		if(i==w){
+			document.getElementById("tn"+i).src="/images/tn"+i+"b.gif";
+		}
+		else{
+			document.getElementById("tn"+i).src="/images/tn"+i+".gif";
+		}
+	}
+	if(w==1){
+		var bono=2;
+	}
+	else if(w==2){
+		var bono=1;
+	}
+	else{
+		var bono=4;
+	}
+	document.getElementById('bono').value=bono;
+	new ajax.xhr.Request('/board/viewBoard.php?w='+w,'',viewBoard,'GET');
+}
+function viewBoard(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			var imgview=document.getElementById('board2');
+			imgview.innerHTML=docXML;
+		}
+	}
+}
+function move_board(){
+	var w=document.getElementById('bono').value;
+	location.href='/board/board.php?w='+w;
+}
+function chg_img(filename,sizeX,sizeY){
+	document.getElementById('vimg').src=filename;
+	var sizeY=sizeY*1;
+	if(sizeX/sizeY>310/385){
+		document.getElementById('vimg').style.width="310px";
+	}
+	else{
+		document.getElementById('vimg').style.height="385px";
+	}	
+}
+function open_rent(id,url){
+	document.getElementById(id).innerHTML="<table bgcolor='#ffffff' border='0' cellpadding='0' cellspacing='0'><tr><td class='ftb'><font color='red'>큰 이미지는 클릭하시면 닫힙니다.</font></td></tr><tr><td><img src='"+url+"' style='cursor:pointer' onclick=close_img('"+id+"')></td></tr></table>";
+}
+function close_img(id){
+	document.getElementById(id).innerHTML="";
+}
+function chg_Wcolor(color,cname,id){
+	document.getElementById(id).style.background="#"+color;
+	document.getElementById(id+"_name").innerHTML=cname;
+}
+function chk_but(pay){
+	new ajax.xhr.Request('/goods/view_but.php?pay='+pay,'',viewBut,'GET');
+	new ajax.xhr.Request('/goods/view_bank.php?pay='+pay,'',viewBank,'GET');
+}
+function viewBut(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			var imgview=document.getElementById('fo_chg');
+			imgview.innerHTML=docXML;
+		}
+	}
+}
+function viewBank(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			var imgview=document.getElementById('chk_bank');
+			imgview.innerHTML=docXML;
+		}
+	}
+}
+function chk_Cookie(){
+	new ajax.xhr.Request('/goods/cookie_view.php','',viewCookie,'GET');
+}
+function viewCookie(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			if(docXML==0){
+				conf_ini_move('order.php','쇼핑중 팔린 상품이 있습니다.결재 전에 확인하시겠습니까?');
+			}
+			else{
+				document.ini.onsubmit();
+			}
+		}
+	}
+}
+function chk_Cookie2(){
+	new ajax.xhr.Request('/goods/cookie_view.php','',viewCookie2,'GET');
+}
+function viewCookie2(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			if(docXML==0){
+				conf_ini_move('order.php','쇼핑중 팔린 상품이 있습니다.결재 전에 확인하시겠습니까?');
+			}
+			else{
+				chk_payname();
+			}
+		}
+	}
+}
+function conf_ini_move(url,msg){
+	if(confirm(msg)){
+		move_ini_page(url);
+	}
+}
+function move_ini(url){
+	document.ini.action=url;
+	document.ini.submit();
+}
+function move_ini_page(url){
+	document.ini.action=url;
+	document.ini.submit();
+}
+function inMail(obj){
+	var fmail=document.getElementById('fmail').value;
+	var smail=document.getElementById('smail').value;
+	document.getElementById(obj).value=fmail+smail;
+}
+function chg_addr(){
+	var val=document.getElementById('searchword').value;
+	new ajax.xhr.Request('/my/in_addr.php?val='+val,'',chgAddr,'GET');
+}
+function chgAddr(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			var innerDiv=document.getElementById('addr');
+			innerDiv.innerHTML=docXML;
+		}
+	}
+}
+function chg_TRcolor(id,color){
+	document.getElementById(id).style.background=color;
+}
+function chg_addr2(){
+	var val=document.getElementById('searchword').value;
+	var params="val="+encodeURI(val);
+	new ajax.xhr.Request('/member/in_addr2.php?'+params,'',chgAddr,'GET');
+}
+function chg_boxcolor(id){
+	document.getElementById(id).value='';
+	document.getElementById(id).style.color='#000000';
+}
+function chg_menu(mno){
+	var f=document.getElementById('first_Menu').value;
+	var s=document.getElementById('sub_Menu').value;
+	var ea=document.getElementById('ea_Menu').value;
+	var hi=document.getElementById('height_Menu').value*1;
+	var left=document.getElementById('left_Menu').value*1;
+	var stPos=ajax.GUI.getXY(document.getElementById(f+mno));
+	var stLeft=ajax.GUI.getXY(document.getElementById(f+"1"));
+	document.getElementById('outLayer').value=s+mno;
+	document.getElementById('outLayerImg').value="smimg"+mno;
+	for(i=1;i<=ea;i++){
+		if(i==mno){
+			document.getElementById(s+mno).style.top=stPos.y+hi+"px";
+			//document.getElementById(s+mno).style.left=stLeft.x-left+"px";
+			document.getElementById(s+mno).style.display='block';
+		}
+		else{
+			document.getElementById(s+i).style.display='none';
+		}
+	}	
+}
+function bdset(mno){
+	var ea=document.getElementById('ea').value;
+	var val=document.getElementById('val').value;
+	for(i=1;i<=ea;i++){
+		if(i==mno){
+			document.getElementById(val+i).style.display='block';
+		}
+		else{
+			document.getElementById(val+i).style.display='none';
+		}
+	}
+}
+function open_viewEdu(sdate){
+	document.getElementById('viewEdu'+sdate).style.display='block';
+}
+function out_move(url,msg){
+	if(confirm(msg)){
+		location.href=url;
+	}
+}
+function chk_Radio(){
+	var chkno=document.getElementsByName('chkno');
+	if(document.getElementById('chkval').checked==true){
+		for(i=0;i<chkno.length;i++){
+			chkno[i].checked=true;
+		}
+	}
+	else{
+		for(i=0;i<chkno.length;i++){
+			chkno[i].checked=false;
+		}
+	}
+}
+function onlyDisplay(id){
+	var id=document.getElementById(id);
+	if(id.style.display=="none"){
+		id.style.display="block";
+	}
+	else{
+		id.style.display="none";
+	}
+}
+function LayerUpOff(id,val){
+	var id=document.getElementById(id);
+	id.style.display=val;
+}
+function chk_Xno(xno){
+	var chkno=document.getElementsByName('chkno');
+	if(chkno[xno].checked==true){
+		chkno[xno].checked=false;
+	}
+	else{
+		chkno[xno].checked=true;
+	}
+}
+function chk_Xno2(xno){
+	var chkno=document.getElementsByName('chkno2');
+	if(chkno[xno].checked==true){
+		chkno[xno].checked=false;
+	}
+	else{
+		chkno[xno].checked=true;
+	}
+}
+function add_tomail2(){
+	var tomail_param=document.getElementById('tomail_param').value;
+	var chkno=document.getElementsByName('chkno');
+	var send_param="_";
+	for(i=0;i<chkno.length;i++){
+		if(chkno[i].checked==true){
+			send_param=send_param+chkno[i].value+"_";
+		}
+	}
+	var params="send_param="+send_param+"&tomail_param="+tomail_param+"&sub=add";
+	new ajax.xhr.Request('/admin/add_tomail.php?'+params,'',chgTomail,'GET');
+}
+function add_tomail(no){
+	var tomail_param=document.getElementById('tomail_param').value;
+	var params="no="+no+"&tomail_param="+tomail_param+"&sub=add";
+	new ajax.xhr.Request('/admin/add_tomail.php?'+params,'',chgTomail,'GET');
+}
+function drop_tomail2(){
+	var tomail_param=document.getElementById('tomail_param').value;
+	var chkno=document.getElementsByName('chkno2');
+	var send_param="_";
+	for(i=0;i<chkno.length;i++){
+		if(chkno[i].checked==true){
+			send_param=send_param+chkno[i].value+"_";
+		}
+	}
+	var params="send_param="+send_param+"&tomail_param="+tomail_param+"&sub=drop";
+	new ajax.xhr.Request('/admin/add_tomail.php?'+params,'',chgTomail,'GET');
+}
+function drop_tomail(no){
+	var tomail_param=document.getElementById('tomail_param').value;
+	var params="no="+no+"&tomail_param="+tomail_param+"&sub=drop";
+	new ajax.xhr.Request('/admin/add_tomail.php?'+params,'',chgTomail,'GET');
+}
+function chgTomail(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			var innerDiv=document.getElementById('tomail');
+			innerDiv.innerHTML=docXML;
+		}
+	}
+}
+function inMail_add(){
+	var tomail_param=document.getElementById('tomail_param').value;
+	var params="tomail_param="+tomail_param;
+	new ajax.xhr.Request('/admin/inMail.php?'+params,'',inTomail,'GET');
+}
+function inTomail(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			var innerDiv=document.getElementById('tmail');
+			innerDiv.value=docXML;
+		}
+	}
+}
+function open_Conet(id1,id2){
+	document.getElementById(id1).style.display='block';
+	document.getElementById(id2).style.display='none';
+}
+window.onload=function(){
+	if(document.getElementById('main_background')){
+		OnLoad();
+		var main_mouse=document.getElementById('main_background');
+		ajax.Event.addListener(main_mouse,'mousemove',new_mnMouse);
+		ajax.Event.addListener(main_mouse,'mousemove',chg_mnMouse);
+	}
+	if(document.getElementById('myEditor')){
+		Editor_Browser();
+	}
+	var msg1=new ajax.dnd.SimpleDragSource('nfMsg');
+
+}
+function leftSet(){
+	var stPos=ajax.GUI.getXY(document.getElementById('loadX'));
+	var lpos=stPos.x+180;
+	document.getElementById('divMenu').style.left=lpos+"px";
+}
+function new_mnMouse(e){
+	var event=window.event || e;
+	var stPos=ajax.GUI.getXY(document.getElementById('smBox'));
+	var xy=ajax.Event.getMouseXY(event);
+	var intop=parseInt(xy.y);
+	var y=parseInt(stPos.y);
+	var top=y-70;
+	var down=y+30;
+	var ea=document.getElementById('ea_Menu').value;
+	if(intop>down || intop<top){
+		for(var i=1;i<=ea;i++){
+			var id="submenu"+i;
+			document.getElementById(id).style.display="none";
+		}
+	}
+
+}
+function chg_mnMouse(e){
+	var event=window.event || e;
+	var layimg=document.getElementById('outLayerImg').value;
+	var lay=document.getElementById('outLayer').value;
+	if(layimg==""){
+		var layimg="smimg1";
+		var lay="submenu1";
+	}
+	var stPos=ajax.GUI.getXY(document.getElementById(layimg));
+	var xy=ajax.Event.getMouseXY(event);
+	var intop=xy.y;
+	var inleft=xy.x;
+	var up_size=(stPos.y*1)-(intop*1);
+	var down_size=(intop*1)-(stPos.y*1);
+	if(up_size>70 || down_size>40){
+		//document.getElementById(imgs).src=inimg;
+		if(lay!=""){
+			if(document.getElementById(lay).style.display=="block"){
+				document.getElementById(lay).style.display="none";
+			}
+		}
+	}
+}
+function chg_PartTable(){
+	var ea=document.getElementById('partea').value;
+	var part_table=encodeURI(document.getElementById('part_table').innerHTML);
+	var params="ea="+ea+"&part_table="+part_table;
+	new ajax.xhr.Request('/nbs/inner/inPart.php?'+params,'',inPart,'GET');
+}
+function inPart(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			document.getElementById('part_table').innerHTML=docXML;
+		}
+	}
+}
+function chgSort(no,chgsort,issort){
+	var f=document.adFom;
+	f.issort.value=issort;
+	f.chsort.value=chgsort;
+	f.no.value=no;
+	f.sub.value="sortmove";
+	f.submit();
+}
+function chgDis(no,chdis,isdis){
+	var f=document.adFom;
+	f.chdis.value=chdis;
+	f.isdis.value=isdis;
+	f.no.value=no;
+	f.sub.value="dismove";
+	f.submit();
+}
+function cmenufom(wm,ws,ss){
+	var f=document.cmenuFom;
+	f.ss.value=ss;
+	f.ws.value=ws;
+	f.wm.value=wm;
+	f.action=f.reurl.value;
+	f.submit();
+}
+function postButton(id,left,top){
+	var dv=id+"_v";
+	var l=left*1;
+	var t=top*1;
+	var im=document.getElementById(id);
+	var di=document.getElementById(dv);
+	var stPos=ajax.GUI.getXY(document.getElementById(id));
+	var left=(stPos.x*1)+l;
+	var top=(stPos.y*1)+t;
+	di.style.top=top+"px";
+	di.style.left=left+"px";
+	di.style.display='block';
+}
+function postOut(id){
+	document.getElementById(id).style.display='none';
+}
+function img_Opa(val,opa){
+	var view=document.getElementById(val);
+	ajax.GUI.setOpacity(view,eval(opa));
+}
+function chg_Rest(val){
+	var params="val="+val;
+	new ajax.xhr.Request('/nbs/inner/viewrest.php',params,resRest,'GET');
+}
+function resRest(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			document.getElementById('rest_menu').innerHTML=docXML;
+		}
+	}
+}
+function chk_AdminLog(){
+	var uid=document.getElementById('uid');
+	var upass=document.getElementById('upass');
+	if(uid.value==""){
+		alert('아이디를 입력하세요');
+		uid.focus();
+		return false;
+	}
+	if(upass.value==""){
+		alert('패스워드를 입력하세요');
+		upass.focus();
+		return false;
+	}
+	params="uid="+uid.value+"&upass="+upass.value;
+	new ajax.xhr.Request("/admin/req/adlog.php",params,resAdminLog,'GET');
+}
+function resAdminLog(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var doc=req.responseText;
+			if(doc=="1"){
+				document.fom.submit();
+			}
+			else if(doc=="0"){
+				alert('아아이와 비밀번호를 확인하세요.');
+			}
+			else{
+				var docs=doc.split("|");
+				location.href='http://'+docs[1];
+			}
+		}
+	}
+}
+function base_AdForm(lm,n){
+	document.adFom.lm.value=lm;
+	document.adFom.n.value=n;
+	document.adFom.submit();
+}
+function faq_chk(xno){
+	var su=document.getElementById('faq_su').value;
+	for(i=1;i<=su;i++){
+		var open_q=document.getElementById('open_q'+i);
+		var close_q=document.getElementById('close_q'+i);
+		var edit_q=document.getElementById('edit_q'+i);
+		var open_a=document.getElementById('open_a'+i);
+		if(i==xno){
+			if(open_q.style.display=="none"){
+				open_q.style.display="block";
+				close_q.style.display="none";
+				edit_q.style.display="none";
+				open_a.style.display="block";
+			}
+			else{
+				open_q.style.display="none";
+				close_q.style.display="block";
+				edit_q.style.display="block";
+				open_a.style.display="none";
+			}
+		}
+	}
+}
+function manafom(act,sub,mcd){
+	f=document.manaFom;
+	f.sub.value=sub;
+	f.mcd.value=mcd;
+	f.action=act;
+	f.submit();
+}
+//매장 상세 보기
+function open_Shop(num,f,su){
+	//alert(num+" "+f+" "+su);
+	for(i=1;i<=su;i++){
+		document.getElementById("show_shop"+i).innerHTML="";
+	}
+	new ajax.xhr.Request('/nbs/inner/shop.php?num='+num+'&f='+f,'',viewShop,'GET');
+}
+function viewShop(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			//alert(docXML);
+			var doc=docXML.split("|");
+			if(doc[0]=="error"){
+				location.href='/err.html';
+			}
+			else{
+				var imgview=document.getElementById("show_shop"+doc[0]);
+				imgview.innerHTML=doc[1];
+			}
+		}
+	}
+}
+//레이어 비우기
+function empty_Layer(id){
+	var layer=document.getElementById(id);
+	layer.innerHTML='';
+}
+function shop_cate(cno){
+	if(cno==0){
+		location.reload();
+	}
+	else{
+		new ajax.xhr.Request('/nbs/inner/shop_sel.php?cno='+cno,'',shopSel,'GET');
+	}
+}
+function shopSel(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			if(docXML=="error"){
+				location.href='/err.html';
+			}
+			else{
+			var imgview=document.getElementById("goshopSel");
+			imgview.innerHTML=docXML;
+			}
+		}
+	}
+}
+function locatePage(num,cno){
+	location.href='/store/store.php?w='+cno+'&num='+num;
+}
+function Locate(num){
+	//alert(num);
+	new ajax.xhr.Request('/nbs/inner/shop.php?num='+num,'',viewShop,'GET');
+}
+function boardFomCheck(){
+	var f=document.form;
+	var rtitle=f.title.value.replace(/(^[ \f\n\r\t]*)|([ \f\n\r\t]*$)/g, "");
+	var rwriter=f.writer.value.replace(/(^[ \f\n\r\t]*)|([ \f\n\r\t]*$)/g, "");
+	var contents=myEditor.document.body.innerHTML.replace(/<[a-z|/]+[^<>]*>/gi, '');
+	if(rtitle==""){
+		alert('제목을 입력하세요.');
+		f.title.value='';
+		f.title.focus();
+		return false;
+	}
+	if(rwriter==""){
+		alert('글쓴이를 입력하세요.');
+		f.writer.value='';
+		f.writer.focus();
+		return false;
+	}
+	if(f.upass.value.length<4 || f.upass.value.length>12){
+		alert('4자 이상 12자 이하의 비밀번호를 입력하세요.');
+		f.upass.focus();
+		return false();
+	}
+	if(f.spamconf.value.length<8){
+		alert('스팸코드 8자리를 입력하세요.');
+		f.spamconf.focus();
+		return false();
+	}
+	var params="spam="+document.getElementById('spamconf').value;
+	new ajax.xhr.Request('/nbs/inner/chkspam.php',params,spam_Response,'GET');
+}
+function spam_Response(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			var doc=docXML.split("|");
+			if(doc[0]=="2"){
+				alert(doc[2]);
+				document.getElementById('spamconf').value='';
+				document.getElementById('spamconf').focus();
+				document.getElementById('spamCode').innerHTML=doc[1];
+			}
+			else{
+				var f=document.form;
+				f.content.value=myEditor.document.body.innerHTML;
+				document.form.submit();
+			}
+		}
+	}
+}
+
+function chg_toLower(id,val){
+	var cd=val.toLowerCase();
+	document.getElementById(id).value=cd;
+}
+function chg_toUpper(id,val){
+	var cd=val.toUpperCase();
+	document.getElementById(id).value=cd;
+}
+function nbs_goto_byselect(act,sub){
+	document.gotofom.action=act;
+	document.gotofom.target=sub;
+	document.gotofom.submit();
+}
+function doro_Change(){
+	var doro=document.getElementById('doro').value;
+	if(doro.length<2){
+		alert('지번/도로명은 한글 2자 이상으로 입력하세요.');
+		document.getElementById('doro').value="";
+		document.getElementById('doro').focus();
+		return false;
+
+	}
+	else{
+		var params="doro="+encodeURI(doro);
+		document.getElementById('addrv').style.display="none";
+		document.getElementById('load_view').style.display="block";
+		new ajax.xhr.Request('/nbs/inner/doro.php',params,doro_Response,'GET');
+	}
+}
+function doro_Response(req){
+	if(req.readyState==4){
+		if(req.status==200){
+			var docXML=req.responseText;
+			document.getElementById('addr').innerHTML=docXML;
+			document.getElementById('addrv').style.display="block";
+			document.getElementById('load_view').style.display='none';
+		}
+	}
+}
+function display_Menu(id1,id2){
+	document.getElementById(id1).style.display="block";
+	document.getElementById(id2).style.display="none";
+}
+function invest_can(val,num,inum){
+	var params="val="+val+"&num="+num+"&inum="+inum;
+	new ajax.xhr.Request('/admin/req/invest_set.php',params,invest_Response,'GET');
+}
+function invest_Response(req){
+	if(req.readyState==4){
+		if(req.status==200){			
+			var docXML=req.responseText;
+			document.subFom.submit();
+		}
+	}
+}
+function divColor(id,color){
+	document.getElementById(id).style.background=color;
+}
+function close_Doro(addr,post1,post2){
+	document.getElementById('address').value=addr;
+	document.getElementById('post1').value=post1;
+	document.getElementById('post2').value=post2;
+	document.getElementById('addrv').style.display="none";
+}
+function fomChange(url,code){
+	var f=document.del_fom;
+	f.bdcode.value=code;
+	f.action=url;
+	f.submit();
+}
+function outCoopCheck(){
+	var f=document.fom;
+	var chk=document.getElementsByName('agree_rad');
+	if(f.name.value==""){
+		alert('성명 입력하세요');
+		f.name.focus();
+		return false;
+	}
+	if(f.sosok2.value==""){
+		alert('학과/부서 입력하세요');
+		f.sosok2.focus();
+		return false;
+	}
+	if(f.hp1.value==""){
+		alert('연락처 입력하세요');
+		f.hp1.focus();
+		return false;
+	}
+	if(f.hp2.value==""){
+		alert('연락처 입력하세요');
+		f.hp2.focus();
+		return false;
+	}
+	if(f.hp3.value==""){
+		alert('연락처 입력하세요');
+		f.hp3.focus();
+		return false;
+	}
+	if(f.bank.value==""){
+		alert('수취은행명 입력하세요');
+		f.bank.focus();
+		return false;
+	}
+	if(f.bank_ac.value==""){
+		alert('수취계좌번호 입력하세요');
+		f.bank_ac.focus();
+		return false;
+	}
+	if(f.bank_user.value==""){
+		alert('예금주 입력하세요');
+		f.bank_user.focus();
+		return false;
+	}
+	if(f.request_invest.value==""){
+		alert('총출자금 입력하세요');
+		f.request_invest.focus();
+		return false;
+	}
+	if(chk[0].checked==false){
+		alert('"개인정보 수집 및 이용 동의"에 동의하셔야 됩니다.');
+		chk[0].focus();
+		return false;
+	}
+	f.submit();
+}
+function agreeCheck(){
+	var f=document.stepForm;
+	var agA=document.getElementsByName('agreeA');
+	var agB=document.getElementsByName('agreeB');
+	var agC=document.getElementsByName('agreeC');
+	if(agA[0].checked==false){
+		nfAlert('개인정보 수집 및 이용에 동의해 주세요.','','agreeA');
+		return false;
+	}
+	if(agB[0].checked==false){
+		nfAlert('개인정보 취급 위탁에 동의해 주세요.','','agreeB');
+		return false;
+	}
+	if(agC[0].checked==false){
+		nfAlert('제3자 제공에 동의해 주세요.','','agreeC');
+		return false;
+	}
+	f.step.value=2;
+	f.submit();
+}
+
+function agreeChange(){
+	var agA=document.getElementsByName('agreeA');
+	var agB=document.getElementsByName('agreeB');
+	var agC=document.getElementsByName('agreeC');
+	if(agA[0].checked==true && agB[0].checked==true && agC[0].checked==true){
+		document.getElementById('agreeBtnA').style.display="none";
+		document.getElementById('agreeBtnB').style.display="block";
+	}
+	else{
+		document.getElementById('agreeBtnA').style.display="block";
+		document.getElementById('agreeBtnB').style.display="none";
+	}
+}
+// 우편번호 찾기 찾기 화면을 넣을 element
+   
+
+function foldDaumPostcode(wrapid) {
+	var element_wrap = document.getElementById(wrapid);
+        // iframe을 넣은 element를 안보이게 한다.
+	document.getElementById('btnFoldWrap').style.display='none';
+    element_wrap.style.display = 'none';
+}
+
+function sample3_execDaumPostcode(wrapid,postid,addrid) {
+		 var element_wrap = document.getElementById(wrapid);
+        // 현재 scroll 위치를 저장해놓는다.
+        var currentScroll = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var fullAddr = data.address; // 최종 주소 변수
+                var extraAddr = ''; // 조합형 주소 변수
+
+                // 기본 주소가 도로명 타입일때 조합한다.
+                if(data.addressType === 'R'){
+                    //법정동명이 있을 경우 추가한다.
+                    if(data.bname !== ''){
+                        extraAddr += data.bname;
+                    }
+                    // 건물명이 있을 경우 추가한다.
+                    if(data.buildingName !== ''){
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+                    fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+                }
+
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById(postid).value = data.zonecode; //5자리 새우편번호 사용
+                document.getElementById(addrid).value = fullAddr;
+
+                // iframe을 넣은 element를 안보이게 한다.
+                // (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
+                element_wrap.style.display = 'none';
+				document.getElementById('btnFoldWrap').style.display='none';
+
+                // 우편번호 찾기 화면이 보이기 이전으로 scroll 위치를 되돌린다.
+                document.body.scrollTop = currentScroll;
+            },
+            // 우편번호 찾기 화면 크기가 조정되었을때 실행할 코드를 작성하는 부분. iframe을 넣은 element의 높이값을 조정한다.
+            onresize : function(size) {
+                element_wrap.style.height = size.height+'px';
+            },
+            width : '100%',
+            height : '100%'
+        }).embed(element_wrap);
+
+        // iframe을 넣은 element를 보이게 한다.
+        element_wrap.style.display = 'block';
+		document.getElementById('btnFoldWrap').style.display='block';
+}
+function addrInsert(val,id){
+		document.getElementById(id).value=val;
+}
+function nfTurn(msg,foc){
+	var getBrowser=Math.max(document.body.clientHeight,window.innerHeight);
+	var divTop = Math.max(document.documentElement.scrollTop,document.body.scrollTop);
+	var divHei = Math.max(document.documentElement.scrollHeight,document.body.scrollHeight);
+	var msgTop=Math.floor(getBrowser/3)+divTop;
+	document.getElementById('altBtn').innerHTML='<input type="button" value="&nbsp;&nbsp;&nbsp;확인&nbsp;&nbsp;&nbsp;" style="cursor:pointer" onclick=nfTurnClose("'+foc+'")>';
+	document.getElementById('altMsg').innerHTML=msg;
+	document.getElementById('nBlind').style.height=divHei+"px";
+	document.getElementById('nfMsg').style.top=msgTop+"px";
+	document.getElementById('nBlind').style.display="block";
+	document.getElementById('nfMsg').style.display="block";
+}
+function nfTurnClose(id){
+	document.getElementById(id).value='';
+	document.getElementById('loadAlt').style.display="none";
+	document.getElementById('nBlind').style.display="none";
+	document.getElementById('nfMsg').style.display="none";
+}
+function investIns(val,id){
+	document.getElementById(id).value=val;
+}
+function changeInvest(val,id){
+	var inv=document.getElementById(id);
+	var j=0;
+	for(var i=0;i<=10;i++){
+		var mon=i*10000;
+		if(mon==val){
+			j=i;
+		}
+	}
+	inv.options[j].selected=true;
+}
+function joinCheck(){
+	var f=document.joinForm;
+	var mail=f.email.value;
+	var att=mail.split('@');
+	var dtt=mail.split(".");
+	var inv=f.invest.value;
+	if(f.wCnt.value==0){
+		/**/
+		if(f.name.value==""){
+			nfAlert('성명을 입력하세요.','ID','name');
+			return false;
+		}
+		if(f.sosok2.value==""){
+			nfAlert('학과/부서를 입력하세요.','ID','sosok2');
+			return false;
+		}
+		if(f.sosok1.options[0].selected==true){
+			nfAlert('소속을 선택하세요.','ID','sosok1');
+			return false;
+		}
+		if(f.hakbun.value==""){
+			nfAlert('학번/사번을 입력하세요.','ID','hakbun');
+			return false;
+		}
+		if(f.hakbuncheck.value==0){
+			nfAlert('이미 등록된 학번/사번이 있습니다..','ID','hakbun');
+			return false;
+		}
+		if(f.hakbun.value==""){
+			nfAlert('학번/사번을 입력하세요.','ID','hakbun');
+			return false;
+		}
+		if(f.chkfg.value==1){
+			if(f.jumin1.value.length<6){
+				nfAlert('주민등록번호를 입력하세요.','ID','jumin1');
+				return false;
+			}
+			if(f.jumin2.value.length<7){
+				nfAlert('주민등록번호를 입력하세요.','ID','jumin2');
+				return false;
+			}
+		}
+		if(f.chkfg.value==2){
+			if(f.fgno1.value.length<6){
+				nfAlert('재외국인번호를 입력하세요.','ID','fgno1');
+				return false;
+			}
+			if(f.fgno2.value.length<7){
+				nfAlert('재외국인번호를 입력하세요.','ID','fgno2');
+				return false;
+			}
+		}
+		if(f.tel1.value.length<2){
+			nfAlert('휴대전화번호를 입력하세요.','ID','tel1');
+			return false;
+		}
+		if(f.tel2.value.length<3){
+			nfAlert('휴대전화번호를 입력하세요.','ID','tel2');
+			return false;
+		}
+		if(f.tel3.value.length<4){
+			nfAlert('휴대전화번호를 입력하세요.','ID','tel3');
+			return false;
+		}
+		if(f.email.value==""){
+			nfAlert('이메일을 입력하세요.','ID','email');
+			return false;
+		}
+		if(att.length<2 || dtt.length<2 ){
+			nfAlert('올바른 이메일을 입력하세요.','ID','email');
+			return false;
+		}
+		if(inv%10000>0 || inv<1){
+			nfAlert('출자금액은 만원단위로 입력하실 수 있습니다.','ID','invest');
+			return false;
+		}
+		if(f.bank.value==""){
+			nfAlert('환불은행명을 입력하세요.','ID','bank');
+			return false;
+		}
+		if(f.bank_ac.value==""){
+			nfAlert('환불계좌번호를 입력하세요.','ID','bank_ac');
+			return false;
+		}
+		f.wCnt.value=1;
+		f.action="/member/join_ok.php";
+		f.submit();
+	}
+}
+-->
+</script>
+
+</head>
+
+<body>
+<input type="hidden" id="first_Menu" value="m"> <!--첫번째 메뉴 아이디를 value 값에 넣어준다. 번호 제외//-->
+<input type="hidden" id="sub_Menu" value="submenu"> <!--두번째 메뉴 아이디를 value 값에 넣어준다. 번호 제외//-->
+<input type="hidden" id="ea_Menu" value="6"> <!--메뉴갯수를 넣어준다//-->
+<input type="hidden" id="height_Menu" value="55"> <!--높이를 넣어준다//-->
+<input type="hidden" id="left_Menu" value="0"> <!--좌측 들이기//-->
+<input type="hidden" id="outLayer" name="outLayer" value=""><!--레이어 넘버값//-->
+<input type="hidden" id="outLayerImg" name="outLayerImg" value=""><!--레이어 넘버값//-->
+
+<div class="wrap"  id="main_background">
+<div class="layout">
+<div class="main">
+<div class="top">
+<div class="tm"><img src="/images/b.gif" width="1" height="21"><br><!-- 홈 로그인 삭제 20170313 <a href="http://dgucoop.dongguk.edu/index.php"><img src="/images/tm_hom.gif" border="0"></a>
+<a href="/member/member.php?w=1"><img src="/images/tm_login.gif" border="0"></a>--><a href="http://dgucoop.dongguk.edu/mana/" target="_blank"><img src="/images/tm_meal.gif" border="0"></a><!--a href="/mana/"><img src="/images/tm_mana.gif" border="0" ></a><a href="http://gwcoop.dongguk.edu" target="_blank"><img src="/images/tm_group.gif" border="0"></a><a href="https://gwcoop.dongguk.edu" target="_blank"><img src="/images/tm_group.gif" border="0"></a--><a href="http://www.dongguk.edu" target="_blank" onfocus="this.blur()"><img src="/images/tm_dgu.gif" border="0"></a></div>
+<div class="top_set"><li class="logo"><a href="/index.php"><img src="/images/logo.png" border="0"></a></li><li class="mn"><a href="/intro/intro.php?w=1"><img src="/images/m1.png" border="0"  id="m1"  onmouseover="chg_menu('1');" style="cursor:pointer;"></a><a href="/member/member.php?w=1"><img src="/images/m2.png" border="0"  id="m2"  onmouseover="chg_menu('2');" style="cursor:pointer;"></a><a href="/store/store.php?w=1"><img src="/images/m3.png" border="0"  id="m3"  onmouseover="chg_menu('3');" style="cursor:pointer;"></a><a href="/mall/mall.php" target="_blank"><img src="/images/m4.png" border="0"  id="m4"  onmouseover="chg_menu('4');" style="cursor:pointer;"></a><a href="/board/board.php?w=1"><img src="/images/m5.png" border="0"  id="m5"  onmouseover="chg_menu('5');" style="cursor:pointer;"></a><a href="/public/public.php?w=1"><img src="/images/m6.png" border="0"  id="m6"  onmouseover="chg_menu('6');" style="cursor:pointer;"></a></li></div>
+<div class="sm" id="smBox">
+<div id="submenu1" style="position:absolute; width:1020px; height:28px; z-index:30; display:none; text-align:left; "><img src="/images/sm1.png" id="smimg1" border="0" usemap="#sub1"></div>
+<div id="submenu2" style="position:absolute; width:1020px; height:28px; z-index:31; display:none; text-align:left; "><img src="/images/sm2_2.png" id="smimg2" border="0" usemap="#sub2"></div>
+<div id="submenu3" style="position:absolute; width:1020px; height:28px; z-index:32; display:none; text-align:left; "><img src="/images/sm3_2.png" id="smimg3" border="0" usemap="#sub3"></div>
+<div id="submenu4" style="position:absolute; width:1020px; height:28px; z-index:33; display:none;  text-align:left; "><img src="/images/sm4.png" id="smimg4" border="0" usemap="#sub4"></div>
+<div id="submenu5" style="position:absolute; width:1020px; height:28px; z-index:34; display:none; text-align:left; "><img src="/images/sm5.png" id="smimg5" border="0" usemap="#sub5"></div>
+<div id="submenu6" style="position:absolute; width:1020px; height:28px; z-index:35; display:none; text-align:left; "><img src="/images/sm6.png" id="smimg6" border="0" usemap="#sub6"></div>
+</div><!--//sm-->
+
+</div>
+
+<map name="sub1">
+    <area shape="rect" coords="230,3,291,26" href="/intro/intro.php?w=1">
+    <area shape="rect" coords="292,3,339,26" href="/intro/intro.php?w=2">
+    <area shape="rect" coords="340,3,375,26" href="/intro/intro.php?w=3">
+    <area shape="rect" coords="375,3,438,26" href="/intro/intro.php?w=4">
+	<area shape="rect" coords="439,3,502,26" href="/intro/intro.php?w=5">
+	<area shape="rect" coords="505,3,594,26" href="/intro/intro.php?w=6">
+</map>
+<map name="sub2">
+    <area shape="rect" coords="484,2,547,25" href="/member/member.php?w=1">
+  </map>
+  <map name="sub3">
+    <area shape="rect" coords="536,2,609,25" href="/store/store.php?w=1">
+    <area shape="rect" coords="610,2,690,25" href="/store/store.php?w=2">
+    <area shape="rect" coords="691,2,750,25" href="/store/store.php?w=4">
+</map>
+ <map name="sub4">
+    <area shape="rect" coords="722,4,788,26" href="/mall/mall.php" target="_blank">
+  </map>
+<map name="sub5">
+    <area shape="rect" coords="751,2,817,25" href="/board/board.php?w=1">
+    <area shape="rect" coords="820,2,871,25" href="/board/board.php?w=2">
+    <area shape="rect" coords="875,2,916,25" href="/board/board.php?w=3">
+    <area shape="rect" coords="920,2,965,25" href="/board/board.php?w=4">
+  </map>
+  <map name="sub6">
+    <area shape="rect" coords="764,2,839,25" href="/public/public.php?w=1">
+    <area shape="rect" coords="846,2,916,25" href="/public/public.php?w=2">
+    <area shape="rect" coords="923,2,1003,25" href="/public/public.php?w=3">
+  </map><meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<div class="sub_layout">
+
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<div class="lemn"><img src="/images/le_s.png"><br><img src="/images/b.gif" width="10" height="25">
+	<div style="height:27px;color:#484d53; font-size: 10pt; cursor:pointer;font-weight:bold; padding:0 0 0 39px;" onclick="location.href='?w=1';">
+	서울캠퍼스</div>	<div style="height:27px;color:#484d53; font-size: 10pt; cursor:pointer;font-weight:bold; padding:0 0 0 39px;" onclick="location.href='?w=2';">
+	고양캠퍼스</div>	<div style="height:27px;color: #59a505; font-size: 10pt; cursor:pointer;font-weight:bold; padding:0 0 0 39px;" onclick="location.href='?w=4';">
+	식당메뉴	</div>		<div style="height:27px;color: #484d53; font-size: 10pt; cursor:pointer;font-weight:bold; padding:0 0 0 50px;" onclick="location.href='?w=4&l=1';">- 오늘의 식단</div>
+				<div style="height:27px;color: #59a505; font-size: 10pt; cursor:pointer;font-weight:bold; padding:0 0 0 50px;" onclick="location.href='?w=4&l=2';">- 주간 식단</div><br><img src="/images/b.gif" width="1" height="150">
+</div>  <div class="smid">
+    <div class="ct">
+    <li class="ctit"><!--<img src="/images/ct_s4_2.png" align="absmiddle">--><span style="postion:absolute;font-size:23pt;color:#242424;text-shadow:1px 1px 1px #999999;font-family:나눔고딕;"></span></li>			
+	 <li class="locat"><img src="/images/b.gif" width="1" height="3"><br><img src="/images/ico_hom.png" align="absmiddle"><span class="loca1">Home &gt; 매장안내  &gt; </span><span class="loca2"> 식당메뉴  > 주간식단</span></li></div><!--//ct-->
+
+	 <div class="detail_board"><style>
+<!--
+.shop_plf{transform: rotate( 90deg ); position:absolute; margin-left:13px; margin-top:-10px;}
+.menuweekpl{clear:both;padding:5px 0 10px 0;}
+//-->
+</style>
+
+   <div id="sdetail">
+		<table width="100%">
+			<tr>
+				<td height="25" align="center" colspan="2" class="ftb"><img src="/images/b_preweek.gif" align="absmiddle" style="cursor:pointer;" onclick="location.href='?w=4&l=2&j=-1'" value=" 이전 ">&nbsp;&nbsp; <span class="menu_date">
+	    2026.09.27 ~ 2026.10.03</span> &nbsp;&nbsp;<img src="/images/b_nexweek.gif" align="absmiddle" style="cursor:pointer;" onclick="location.href='?w=4&l=2&j=1'" value=" 다음 ">
+		<div style="float:right;"><img src="/images/excel.gif" style="cursor:pointer;" onclick="document.menuFom.submit();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+			</tr>
+		</table>
+		<table border="0" cellpadding="1" cellspacing="1" bgcolor="#CDD6B5" align="center">
+			<tr bgcolor="#F7F7EF" class="mft">
+				<td style="padding:5px 0 5px 0;text-align:center;width:100px;font-weight:bold;" colspan="2">코너</td>
+								<td style='padding:5px 0 5px 0;text-align:center;width:86px;line-height:150%;'><span style="font-weight:bold;">일<br>09월 27일</span></td>
+								<td style='padding:5px 0 5px 0;text-align:center;width:86px;line-height:150%;'><span style="font-weight:bold;">월<br>09월 28일</span></td>
+								<td style='padding:5px 0 5px 0;text-align:center;width:86px;line-height:150%;'><span style="font-weight:bold;">화<br>09월 29일</span></td>
+								<td style='padding:5px 0 5px 0;text-align:center;width:86px;line-height:150%;'><span style="font-weight:bold;">수<br>09월 30일</span></td>
+								<td style='padding:5px 0 5px 0;text-align:center;width:86px;line-height:150%;'><span style="font-weight:bold;">목<br>10월 01일</span></td>
+								<td style='padding:5px 0 5px 0;text-align:center;width:86px;line-height:150%;border:2px solid #156d00'><span style="font-weight:bold;">금<br>10월 02일</span></td>
+								<td style='padding:5px 0 5px 0;text-align:center;width:86px;line-height:150%;'><span style="font-weight:bold;">토<br>10월 03일</span></td>
+							</tr>
+						<tr bgcolor="#ffffff">
+				<td colspan="9" style="padding:5px 0 3px 5px;" class="menu_st">상록원3층식당</td>
+			</tr>
+						<tr>
+								<td style="width:30;padding:5px 0 5px 0;" align="center" bgcolor="#F7F7EF" class="mft" rowspan=2>집<br>밥</td>
+				<td width="70" align="center" bgcolor="#F7F7EF" class="mft"  style="padding:5px 0 5px 0;">중식</td>								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">돈갈비김치찌개(뚝)<br />
+(돼지:국내산)<br />
+치킨가라아게<br />
+(닭:국내산)<br />
+아몬드멸치볶음<br />
+콩나물무침/도시락김<br />
+샐러드<br />
+배추김치<br />
+(배추,고춧가루:국내산)</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">비비고만두전골(뚝)<br />
+(소:호주산)<br />
+납작떡갈비<br />
+(돼지/소:국내산)<br />
+미역줄기볶음<br />
+샐러드<br />
+배추김치<br />
+(배추,고춧가루:국내산)</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">쇠고기고추장찌개(뚝)<br />
+(소:호주산)<br />
+삼겹살오븐구이<br />
+(돼지:독일산)<br />
+우엉어묵조림<br />
+가지나물<br />
+샐러드<br />
+배추김치<br />
+(배추,고춧가루:국내산)</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">육개장칼국수(뚝)<br />
+(소:호주산)<br />
+스팸구이&계란후라이<br />
+(돼지:외국산,국내산)<br />
+애호박볶음<br />
+샐러드<br />
+배추김치<br />
+(배추,고춧가루:국내산)</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;">쇠고기국밥(뚝)<br />
+(소:호주산)<br />
+명란계란말이<br />
+깻잎무침<br />
+샐러드<br />
+깍두기<br />
+(무:국내산,고춧가루:중국산)<br />
+</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">개천절 휴무</span>
+								</td>
+							</tr>
+						<tr>
+				<td align="center" bgcolor="#F7F7EF" class="mft" style="padding:5px 0 5px 0;">석식</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;">날치알김치불고기솥밥<br />
+(소:호주산)<br />
+떡볶이<br />
+김말이강정<br />
+샐러드<br />
+배추김치<br />
+(배추,고춧가루:국내산)<br />
+</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;">매운돈갈비찜(뚝)<br />
+(돼지:국내산)<br />
+치킨너겟<br />
+(닭:국내산,브라질산)<br />
+잡채<br />
+샐러드<br />
+배추김치<br />
+(배추,고춧가루:국내산)</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;">낙삼불고기덮밥<br />
+(돼지:독일산,낙지:베트남산)<br />
+새우볼튀김<br />
+숙주나물<br />
+샐러드<br />
+배추김치<br />
+(배추,고춧가루:국내산)</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;">돌솥비빔밥<br />
+언양식바싹불고기*새송이구이<br />
+(돼지:국내산)<br />
+샐러드<br />
+배추김치<br />
+(배추,고춧가루:국내산)<br />
+쁘띠첼복숭아푸딩</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;">간장파불고기(뚝)<br />
+(돼지:독일산)<br />
+바싹오징어볶음(찬)<br />
+(오징어:페루산)<br />
+건파래볶음<br />
+양배추쌈<br />
+샐러드<br />
+배추김치<br />
+(배추,고춧가루:국내산)</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+							</tr>
+									<tr>
+								<td style="width:30;padding:5px 0 5px 0;" align="center" bgcolor="#F7F7EF" class="mft" rowspan=2><div style=clear:both;>한<br>그<br>릇</div><div class=menuweekpl><div class=shop_plf>(</div>한<br>정<br>판<br>매<div class=shop_plf>)</div></div></td>
+				<td width="70" align="center" bgcolor="#F7F7EF" class="mft"  style="padding:5px 0 5px 0;">중식</td>								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">치즈돈가스<br />
+(돼지:국내산)<br />
+크림스프<br />
+배추김치<br />
+(배추,고춧가루:국내산)<br />
+탄산음료(캔)<br />
+<br />
+**12시부터 한정판매</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">삼겹살두루치기덮밥<br />
+(돼지:독일산)<br />
+치킨텐더&감자튀김<br />
+(닭:국내산)<br />
+배추김치<br />
+(배추,고춧가루:국내산)<br />
+초록매실(캔)<br />
+<br />
+**12시부터 한정판매</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">오므라이스&그릴소세지<br />
+(돼지:국내산)<br />
+쫄면무침&군만두<br />
+배추김치<br />
+(배추,고춧가루:국내산)<br />
+탄산음료(캔)<br />
+<br />
+**12시부터 한정판매</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">닭갈비야채비빔밥<br />
+(닭:국내산)<br />
+고구마고로케<br />
+배추김치<br />
+(배추,고춧가루:국내산)<br />
+식혜(캔)<br />
+<br />
+**12시부터 한정판매</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;">차슈덮밥<br />
+(돼지:독일산)<br />
+미니잔치국수&포자만두찜<br />
+(배추,고춧가루:국내산)<br />
+배추김치<br />
+(배추,고춧가루:국내산)<br />
+<br />
+**12시부터 한정판매</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 7,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+						<tr>
+				<td align="center" bgcolor="#F7F7EF" class="mft" style="padding:5px 0 5px 0;">석식</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+							</tr>
+												<tr bgcolor="#ffffff">
+				<td colspan="9" style="padding:5px 0 3px 5px;" class="menu_st">상록원2층식당</td>
+			</tr>
+						<tr>
+								<td style="width:30;padding:5px 0 5px 0;" align="center" bgcolor="#F7F7EF" class="mft" rowspan=2>백<br>반<br>코<br>너</td>
+				<td width="70" align="center" bgcolor="#F7F7EF" class="mft"  style="padding:5px 0 5px 0;">중식</td>								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+						<tr>
+				<td align="center" bgcolor="#F7F7EF" class="mft" style="padding:5px 0 5px 0;">석식</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+							</tr>
+									<tr>
+								<td style="width:30;padding:5px 0 5px 0;" align="center" bgcolor="#F7F7EF" class="mft" rowspan=2>일<br>품<br>코<br>너</td>
+				<td width="70" align="center" bgcolor="#F7F7EF" class="mft"  style="padding:5px 0 5px 0;">중식</td>								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">11:00~14:00<br />
+마늘치킨덮밥*요구르트<br />
+*자율배식*<br />
+배추김치/단무지<br />
+(배추,고춧가루:국내산)</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 4,500</span>				<br><span style='color:#969562;font-size:11px;'>닭:국내산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">11:00~14:00<br />
+소세지오므라이스*쥬시쿨<br />
+*자율배식*<br />
+배추김치/단무지<br />
+(배추,고춧가루:국내산)</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 5,000</span>				<br><span style='color:#969562;font-size:11px;'>돼지:국내산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">11:00~14:00<br />
+차슈동*요구르트<br />
+*자율배식*<br />
+배추김치/단무지<br />
+(배추,고춧가루:국내산)</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 5,000</span>				<br><span style='color:#969562;font-size:11px;'>소:호주산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">11:00~14:00<br />
+치킨마요덮밥*요구르트<br />
+*자율배식*<br />
+배추김치/단무지<br />
+(배추,고춧가루:국내산)</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 4,500</span>				<br><span style='color:#969562;font-size:11px;'>닭:국내산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;">11:00~14:00<br />
+날치알김치볶음밥*요구르트<br />
+*자율배식*<br />
+배추김치/단무지<br />
+(배추,고춧가루:국내산)</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 4,500</span>				<br><span style='color:#969562;font-size:11px;'>배추,고춧가루:국내산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+						<tr>
+				<td align="center" bgcolor="#F7F7EF" class="mft" style="padding:5px 0 5px 0;">석식</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+							</tr>
+									<tr>
+								<td style="width:30;padding:5px 0 5px 0;" align="center" bgcolor="#F7F7EF" class="mft" rowspan=2>양<br>식<br>코<br>너</td>
+				<td width="70" align="center" bgcolor="#F7F7EF" class="mft"  style="padding:5px 0 5px 0;">중식</td>								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">11:30~14:00 <br />
+더블까스(치킨까스&돈까스)(닭:국내산,돼지:국내산)6500원<br />
+치즈오븐파스타 6500원(한정판매)</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">11:30~14:00 <br />
+고구마치즈돈까스(돼지:국내산)6000원<br />
+치즈오븐파스타 6500원(한정판매)</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">11:30~14:00 <br />
+더블까스(새우까스&돈까스)&감자튀김(돼지:국내산)6500원<br />
+치즈오븐파스타 6500원(한정판매)</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">11:30~14:00 <br />
+치즈돈까스(돼지:국내산)6300원<br />
+치즈오븐파스타 6500원(한정판매)</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;">11:30~14:00 <br />
+통등심돈까스(돼지:국내산)6000원<br />
+치즈오븐파스타 6500원(한정판매)</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+						<tr>
+				<td align="center" bgcolor="#F7F7EF" class="mft" style="padding:5px 0 5px 0;">석식</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+							</tr>
+									<tr>
+								<td style="width:30;padding:5px 0 5px 0;" align="center" bgcolor="#F7F7EF" class="mft" rowspan=2>뚝<br>배<br>기<br>코<br>너</td>
+				<td width="70" align="center" bgcolor="#F7F7EF" class="mft"  style="padding:5px 0 5px 0;">중식</td>								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">11:00~14:00<br />
+-더진국-<br />
+수육국밥/순대국밥6,800원<br />
+얼큰국밥<br />
+7,000원<br />
+(돈사골:국내산/돈육:외국산)</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">11:00~14:00<br />
+-더진국-<br />
+수육국밥/순대국밥6,800원<br />
+얼큰국밥<br />
+7,000원<br />
+(돈사골:국내산/돈육:외국산)</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">11:00~14:00<br />
+-더진국-<br />
+수육국밥/순대국밥6,800원<br />
+얼큰국밥<br />
+7,000원<br />
+(돈사골:국내산/돈육:외국산)</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">11:00~14:00<br />
+-더진국-<br />
+수육국밥/순대국밥6,800원<br />
+얼큰국밥<br />
+7,000원<br />
+(돈사골:국내산/돈육:외국산)</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;">11:00~14:00<br />
+-더진국-<br />
+수육국밥/순대국밥6,800원<br />
+얼큰국밥<br />
+7,000원<br />
+(돈사골:국내산/돈육:외국산)</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+						<tr>
+				<td align="center" bgcolor="#F7F7EF" class="mft" style="padding:5px 0 5px 0;">석식</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+							</tr>
+												<tr bgcolor="#ffffff">
+				<td colspan="9" style="padding:5px 0 3px 5px;" class="menu_st">상록원1층식당(솥앤누들)</td>
+			</tr>
+						<tr>
+								<td style="width:30;padding:5px 0 5px 0;" align="center" bgcolor="#F7F7EF" class="mft" rowspan="7" colspan="2">메<br>뉴</td>
+												<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">****솥밥****<br />
+10:30~18:30<br />
+(15:00~16:00 휴게시간)<br />
+삼겹김치철판 6,000원<br />
+치즈불닭철판 7,000원<br />
+데리야끼치킨솥밥 5,700원 <br />
+숯불삼겹솥밥 5,700원<br />
+우삼겹솥밥 6,800원<br />
+콘치즈솥밥 5,000원<br />
+명란아보카도솥밥 6,000원<br />
+참치마요솥밥 5,500원<br />
+11:00~18:30<br />
+철판돈가스 7,000원<br />
+낙지삼겹솥밥 6,500원</span>
+								<br><span style='color:#969562;font-size:11px;'>삼겹-돼지:독일산/닭:국내산/소:미국산/스팸-돼지:국내산,외국산/돈가스-돼지:국내산/낙지:베트남산/쌀:국내산/배추김치-배추,고춧가루:국내산/참치캔-가다랑어:베트남산/명란-명태알:러시아산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">****솥밥****<br />
+10:30~18:30<br />
+(15:00~16:00 휴게시간)<br />
+삼겹김치철판 6,000원<br />
+치즈불닭철판 7,000원<br />
+데리야끼치킨솥밥 5,700원 <br />
+숯불삼겹솥밥 5,700원<br />
+우삼겹솥밥 6,800원<br />
+콘치즈솥밥 5,000원<br />
+명란아보카도솥밥 6,000원<br />
+참치마요솥밥 5,500원<br />
+11:00~18:30<br />
+철판돈가스 7,000원<br />
+낙지삼겹솥밥 6,500원</span>
+								<br><span style='color:#969562;font-size:11px;'>삼겹-돼지:독일산/닭:국내산/소:미국산/스팸-돼지:국내산,외국산/돈가스-돼지:국내산/낙지:베트남산/쌀:국내산/배추김치-배추,고춧가루:국내산/참치캔-가다랑어:베트남산/명란-명태알:러시아산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">****솥밥****<br />
+10:30~18:30<br />
+(15:00~16:00 휴게시간)<br />
+삼겹김치철판 6,000원<br />
+치즈불닭철판 7,000원<br />
+데리야끼치킨솥밥 5,700원 <br />
+숯불삼겹솥밥 5,700원<br />
+우삼겹솥밥 6,800원<br />
+콘치즈솥밥 5,000원<br />
+명란아보카도솥밥 6,000원<br />
+참치마요솥밥 5,500원<br />
+11:00~18:30<br />
+철판돈가스 7,000원<br />
+낙지삼겹솥밥 6,500원</span>
+								<br><span style='color:#969562;font-size:11px;'>삼겹-돼지:독일산/닭:국내산/소:미국산/스팸-돼지:국내산,외국산/돈가스-돼지:국내산/낙지:베트남산/쌀:국내산/배추김치-배추,고춧가루:국내산/참치캔-가다랑어:베트남산/명란-명태알:러시아산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">****솥밥****<br />
+10:30~18:30<br />
+(15:00~16:00 휴게시간)<br />
+삼겹김치철판 6,000원<br />
+치즈불닭철판 7,000원<br />
+데리야끼치킨솥밥 5,700원 <br />
+숯불삼겹솥밥 5,700원<br />
+우삼겹솥밥 6,800원<br />
+콘치즈솥밥 5,000원<br />
+명란아보카도솥밥 6,000원<br />
+참치마요솥밥 5,500원<br />
+11:00~18:30<br />
+철판돈가스 7,000원<br />
+낙지삼겹솥밥 6,500원</span>
+								<br><span style='color:#969562;font-size:11px;'>삼겹-돼지:독일산/닭:국내산/소:미국산/스팸-돼지:국내산,외국산/돈가스-돼지:국내산/낙지:베트남산/쌀:국내산/배추김치-배추,고춧가루:국내산/참치캔-가다랑어:베트남산/명란-명태알:러시아산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;">****솥밥****<br />
+10:30~18:30<br />
+(15:00~16:00 휴게시간)<br />
+삼겹김치철판 6,000원<br />
+치즈불닭철판 7,000원<br />
+데리야끼치킨솥밥 5,700원 <br />
+숯불삼겹솥밥 5,700원<br />
+우삼겹솥밥 6,800원<br />
+콘치즈솥밥 5,000원<br />
+명란아보카도솥밥 6,000원<br />
+참치마요솥밥 5,500원<br />
+11:00~18:30<br />
+철판돈가스 7,000원<br />
+낙지삼겹솥밥 6,500원</span>
+								<br><span style='color:#969562;font-size:11px;'>삼겹-돼지:독일산/닭:국내산/소:미국산/스팸-돼지:국내산,외국산/돈가스-돼지:국내산/낙지:베트남산/쌀:국내산/배추김치-배추,고춧가루:국내산/참치캔-가다랑어:베트남산/명란-명태알:러시아산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+									<tr>
+												<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">****누들****<br />
+11:00~18:00<br />
+(14:30~15:30 휴게시간)<br />
+냉모밀 5,500원<br />
+냉모밀&돈까스set 6,800원<br />
+냉모밀&알밥set 6,800원<br />
+돈코츠라멘 6,500원</span>
+								<br><span style='color:#969562;font-size:11px;'>돈까스-돼지:국내산/삼겹-돼지:독일산/사골엑기스-소:호주산/쌀:국내산/배추김치-배추,고춧가루:국내산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">****누들****<br />
+11:00~18:00<br />
+(14:30~15:30 휴게시간)<br />
+냉모밀 5,500원<br />
+냉모밀&돈까스set 6,800원<br />
+냉모밀&알밥set 6,800원<br />
+돈코츠라멘 6,500원</span>
+								<br><span style='color:#969562;font-size:11px;'>돈까스-돼지:국내산/삼겹-돼지:독일산/사골엑기스-소:호주산/쌀:국내산/배추김치-배추,고춧가루:국내산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">****누들****<br />
+11:00~18:00<br />
+(14:30~15:30 휴게시간)<br />
+냉모밀 5,500원<br />
+냉모밀&돈까스set 6,800원<br />
+냉모밀&알밥set 6,800원<br />
+돈코츠라멘 6,500원</span>
+								<br><span style='color:#969562;font-size:11px;'>돈까스-돼지:국내산/삼겹-돼지:독일산/사골엑기스-소:호주산/쌀:국내산/배추김치-배추,고춧가루:국내산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">****누들****<br />
+11:00~18:00<br />
+(14:30~15:30 휴게시간)<br />
+꼬치어묵우동 5,500원<br />
+우동&돈까스set 6,800원<br />
+우동&알밥set 6,800원<br />
+돈코츠라멘 6,500원</span>
+								<br><span style='color:#969562;font-size:11px;'>돈까스-돼지:국내산/삼겹-돼지:독일산/사골엑기스-소:호주산/쌀:국내산/배추김치-배추,고춧가루:국내산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;">****누들****<br />
+11:00~18:00<br />
+(14:30~15:30 휴게시간)<br />
+꼬치어묵우동 5,500원<br />
+우동&돈까스set 6,800원<br />
+우동&알밥set 6,800원<br />
+돈코츠라멘 6,500원</span>
+								<br><span style='color:#969562;font-size:11px;'>돈까스-돼지:국내산/삼겹-돼지:독일산/사골엑기스-소:호주산/쌀:국내산/배추김치-배추,고춧가루:국내산</span></td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+									<tr>
+												<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+									<tr>
+												<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+									<tr>
+												<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+									<tr>
+												<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+									<tr>
+												<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+																											<tr bgcolor="#ffffff">
+				<td colspan="9" style="padding:5px 0 3px 5px;" class="menu_st">누리터 식당(일산캠퍼스)</td>
+			</tr>
+						<tr>
+								<td style="width:30;padding:5px 0 5px 0;" align="center" bgcolor="#F7F7EF" class="mft" colspan='2'>조식<br>뷔페</td>
+												<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">천원의 아침</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 1,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">천원의 아침</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 1,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">천원의 아침</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 1,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">천원의 아침</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 1,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;">천원의 아침</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 1,000</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+									<tr>
+								<td style="width:30;padding:5px 0 5px 0;" align="center" bgcolor="#F7F7EF" class="mft" rowspan=2>누<br>리<br>밥<br>상</td>
+				<td width="70" align="center" bgcolor="#F7F7EF" class="mft"  style="padding:5px 0 5px 0;">중식</td>								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">치즈돈까스<br />
+(돼지:국내산)<br />
+6,800원<br />
+<br />
+불닭소스김치소시지볶음밥<br />
+(소시지-닭,돈지방:국산/배추,고추분:중국산)<br />
+파닭<br />
+(닭:브라질산)<br />
+5,500원<br />
+</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">제육덮밥*계란후라이<br />
+(돼지:국내산)<br />
+도토리묵냉국<br />
+(배추,고추분:국내산)<br />
+5,500원<br />
+<br />
+김치가츠나베<br />
+(돼지:국내산/배추,고추분:국내산)<br />
+6,000원</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">참치야채비빔밥<br />
+(참치:베트남산)<br />
+새우감자고로케*케첩<br />
+5,500원<br />
+<br />
+묵은지감자탕<br />
+(돼지:국내산/배추:국내산,고추분:중국산)<br />
+6,000원</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;">점보믹스동(돈까스+치킨)<br />
+(닭:브라질산/돼지:국내산)<br />
+6,000원<br />
+<br />
+삼겹김치찌개*스팸구이<br />
+(삼겹:독일산/배추,고추분:국내산//스팸-돼지:지방일부국산,외국산/대두:외국산)<br />
+6,000원</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;">김치소불고기솥밥<br />
+(배추,고추분:국내산/소:호주산)<br />
+6,000원<br />
+<br />
+새우튀김우동<br />
+고추장멸치주먹밥<br />
+5,500원</span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+						<tr>
+				<td align="center" bgcolor="#F7F7EF" class="mft" style="padding:5px 0 5px 0;">석식</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;">알밥*미니우동<br />
+(배추,국내산,고추분:중국산)<br />
+김치<br />
+(배추,고추분:국내산)<br />
+핫도그*케첩</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 5,500</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;">수육곰탕<br />
+(돼지:외국산)<br />
+쌀밥<br />
+부추무침*깍두기</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 6,500</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;">닭갈비볶음밥<br />
+(닭:국내산)<br />
+우동국물<br />
+알어묵야채조림<br />
+콩나물무침<br />
+김치<br />
+(배추,고추분:국내산)</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 5,500</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;">날치알김치볶음밥<br />
+(배추,고추분:국내산)<br />
+팽이장국<br />
+칠리소스떡갈비조림<br />
+(돼지:국내산)<br />
+깍두기</span>
+				<br><br><span  style='color:#ff0000;font-size:11px;'>￦ 5,500</span>				</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;"></span>
+								</td>
+							</tr>
+									<tr>
+								<td style="width:30;padding:5px 0 5px 0;" align="center" bgcolor="#F7F7EF" class="mft" colspan='2'>더진국</td>
+												<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+									<tr>
+								<td style="width:30;padding:5px 0 5px 0;" align="center" bgcolor="#F7F7EF" class="mft" colspan='2'>팬앤<br>누들</td>
+												<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#f7f9e0'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+								<td style="padding:5px 0 5px 0;text-align:center;width:80px;" valign="top" bgcolor='#ffffff'><span style="color:#303030;font-size:9pt;"></span>
+								</td>
+							</tr>
+														</table>
+	</div>
+	<form name="menuFom" method="post" action="/nbs/inner/down_menu.php">
+	<input type="hidden" name="syear" value="2026">
+	<input type="hidden" name="smonth" value="10">
+	<input type="hidden" name="sdate" value="02">
+	</form>
+
+</div>
+</div><!--//smid-->
+
+</div>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<div class="bm">
+<li class="bmn"><a href="/intro/intro.php?w=5"><img src="/images/bm1.png" border="0"></a><a href="/intro/etc.php?w=2"><img src="/images/bm2.png" border="0"></a><a href="/intro/etc.php?w=3"><img src="/images/bm3.png" border="0"></a><a href="/intro/etc.php?w=1"><img src="/images/bm4.png" border="0"></a><a href="http://www.dongguk.edu/" target="_blank"><img src="/images/bm5.png" border="0"></a></li>
+<li class="blink"><img src="/images/bm_link.png" align="absmiddle">
+<select name="linksite" class="lk_hom"  onchange="nbs_goto_byselect(this.value, 'blank')">
+  <option selected  class="lk_hom">LINK SITE</option>
+  <option value="http://coop.hufs.ac.kr"  class="lk_hom">한국외국어대학교 생활협동조합</option>
+  <option value="http://www.knucoop.or.kr/"  class="lk_hom">강원대생활협동조합</option>
+  <option value="http://coop.knu.ac.kr"  class="lk_hom">경북대학교 생활협동조합 </option>
+  <option value="http://gnucoop.or.kr"  class="lk_hom">경상대학교 생활협동조합</option>
+  <option value="http://coop.khu.ac.kr"  class="lk_hom">경희대학교 생활협동조합</option>
+  <option value="http://kmucoop.kookmin.ac.kr/"  class="lk_hom">국민대학교 생활협동조합</option>
+  <option value="http://kit.kumoh.ac.kr/~kitcoop/"  class="lk_hom">금오공과대학교 생활협동조합</option>
+  <option value="http://dgucoop.dongguk.ac.kr"  class="lk_hom">동국대학교 생활협동조합</option>
+  <option value="http://coop.pusan.ac.kr/"  class="lk_hom">부산대학교 생활협동조합</option>
+  <option value="http://sjcoop.or.kr"  class="lk_hom">상지대학교 생활협동조합</option>
+  <option value="http://www.snuco.com"  class="lk_hom">서울대학교 생활협동조합</option>
+  <option value="http://sjcoop.org"  class="lk_hom">세종대학교 생활협동조합</option>
+  <option value="http://www.soongguri.com"  class="lk_hom">숭실대학교 생활협동조합</option>
+  <option value="http://www.yonseicoop.co.kr"  class="lk_hom">연세대학교 생활협동조합</option>
+  <option value="http://coop.ewha.ac.kr/"  class="lk_hom">이화여자대학교 생활협동조합</option>
+  <option value="http://uicoop.ac.kr"  class="lk_hom">인천대학교 생활협동조합</option>
+  <option value="http://coop.chonnam.ac.kr/"  class="lk_hom">전남대학교 생활협동조합</option>
+  <option value="http://chosuncoop.com"  class="lk_hom">조선대학교 생활협동조합</option>
+  <option value="https://coop.koreatech.ac.kr:45578/"  class="lk_hom">한국기술교육대학교 생활협동조합</option>
+  <option value="http://www.univcoop.or.kr"  class="lk_hom">한국대학생활협동조합연합회</option> 
+</select>
+</li>
+<form name="gotofom" method="post" action="">
+</form>
+</div>
+<!--
+<div class="bottom"><img src="/images/bottom2.gif" border="0" usemap="#adm">
+  <map name="adm">
+    <area shape="rect" coords="54,19,273,53" href="/admin" target="_self" >
+  </map>
+</div>-->
+<div class="bottom">
+	<table style="width:100%;" align="center">
+		<tr>
+			<td style="padding-left:50px;"><img src="/images/bot_logo.gif" border="0" style="cursor:default;" onclick="location.href='/admin';"></td>
+			<td style="float:left;padding:8px 0 0 0;font-size:8pt;color:#5B5B5B;font-weight:bold;text-align:left;">상호 : 동국대학교 소비자생활협동조합 &nbsp;&nbsp;주소 : 서울시 중구 필동로1가 30 동국대학교내 &nbsp;&nbsp;사업자등록번호 : 201-82-04401 &nbsp;&nbsp;대표 : 전병훈<br>
+	통신판매업신고 : 제2008-서울중구-1095호 &nbsp;&nbsp;전화 : 02)2260-8946~54 &nbsp;&nbsp;팩스 : 02)2271-3129</td>
+		</tr>
+	</table>
+</div>
+</div><!--//main-->
+<div class="rban"><script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<div id='divMenu' style='position:absolute;z-index:2;top:0;width:78px;'>
+<Script language="Javascript" src="/lib/circle.js"></Script><!--<img src="/fla/rb_circle.gif">--><br><img src="/images/rb_s1.png" border="0"></a><a href="/member/member.php?w=3"><img src="/images/rb1.png" border="0"></a><br><a href="/board/board.php?w=2"><img src="/images/rb2.png" border="0"></a><br><a href="/board/board.php?w=3"><img src="/images/rb3.png" border="0"></a><br><a href="/store/store.php?w=4"><img src="/images/rb4.png" border="0"></a><br><!--조합탈퇴<a href="/member/member.php?w=4"><img src="/images/rb5.png" border="0"></a><br>--><a href="#"><img src="/images/rb_s2.png" border="0"></a>
+
+</div>
+
+<script src="/lib/float.js"></script></div>
+
+</div>
+</div>
+      <!--비밀번호//-->
+<div id="chkPass" style="position:absolute;z-index:3;display:none;border:1px solid #bc8c5f;background:#ffffff;left:500px;top:220px;">
+<table width="565" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td style="background:#efc58d;color:#ffffff;font-weight:bold;cursor:pointer;"><div style="border:1px solid #ffffff;width:18px;text-align:center;float:right;cursor:pointer;" onclick="clearOpa('mainBody','chkPass');" alt="닫기">X</div></td>
+</tr>
+<tr><td bgcolor="#efc58d" height="1"></td></tr>
+<tr><td valign="top">
+<table width="565" height="92" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="92" align="left" valign="top" style="padding:13px 0 20px 25px;"><img src="/board/img/pw_top2.gif"><br><img src="/board/img/pw_top_L.gif"></td>
+  </tr>
+</table>
+<table width="424" height="85" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr><td valign="bottom"><img src="/board/img/pw_s1.gif" width="424" height="11"></td>
+  <tr>
+    <td width="525" align="center" background="/board/img/pw_L.gif">
+	 <table width="341" height="41" align="center" valign="top">
+		<form name="passFom" action="" method="post" submit="return false;">
+		<tr>
+		  <td width="53" align="center" class="ft_col" style="padding:3px 0 0 0;">비밀번호</td>
+          <td width="276" align="center"><input name="upass" id="upass" type="password" class="frm" style="height:18px;width:200px;" onkeydown="if(event.keyCode==13){nbs_passFom();};" onkeyup="text_specialCheck('upass','비밀번호','null_base');">
+              <img src="/board/img/btn_ok.gif" align="absmiddle" style="cursor:pointer;" onclick="nbs_passFom();"></td>
+		</tr>
+	    </form>
+    </table></td>
+  </tr>
+  <tr><td valign="top"><img src="/board/img/pw_s2.gif" width="424" height="11"></td>
+  <tr></tr>
+</table>
+</td></tr>
+<tr><td height="55"></td></tr>
+</table>
+</div>
+<div id="mainBody" style="position:absolute;left:0;top:0;width:100%;height:100%;display:none;z-index:1;text-align:center;"><img src="/images/b.gif" id="opaImg" style="background:#000000"></div><!--비번 끝//-->
+<!--로딩 창 //-->
+<div id="nBlind" style="display:none;position:absolute;top:0;width:100%;background:#000000;opacity:0;filter:alpha(opacity=0);z-index:5;">
+	<div id="loadAlt" style="display:none;position:relative;margin:0 auto;width:600px;text-align:center;"><img src="/images/loading.gif"></div>
+</div>
+<!--로딩 창 끝 //-->
+<!--메세지 창 //-->
+<div id="nfMsg"  style="display:none;top:0;width:100%;position:absolute;display:none;z-index:11;">
+<div style="border:3px solid #62969C;box-shadow:1px 1px 1px #ffffff,3px 3px 3px #969696,4px 4px 4px #b0b0b0,6px 6px 6px #c6c6c6;width:450px;padding:20px;position:relative;margin:0 auto;background:#ffffff;cursor:default;">
+<div style="width:97%; text-align:right; background-color:#62969C; position:absolute;margin-top:-25px; margin-left:-23px;font-size:8.6pt;color:#FFFFFF;font-weight:bold; padding:5px 20px 5px 0;z-index:6;cursor:default;"><img src="/images/ico_check.png" align="absmiddle">동국대학교소비자생활협동조합 알림</div>
+<input type="hidden" id="nfAltFocus" value="">
+<table style="width:100%;">
+	<tr>
+		<td style="padding:20px 5px 10px 5px;">
+		<div id="altMsg" style="text-align:left;font-size:10.5pt;line-height:170%;overflow:hidden;"></div></td>
+	</tr>
+	<tr>
+		<td style="text-align:right;padding:10px 5px 0 0;"><div id="altBtn"><input type="button" value="&nbsp;&nbsp;&nbsp;확인&nbsp;&nbsp;&nbsp;" style="cursor:pointer" onclick="nfAlertClose();"></div></td>
+	</tr>
+</table>
+</div>
+</div>
+<!--메세지 끝//-->
+<!-- 리포트2.0 로그분석코드 시작 -->
+<script type="text/javascript">
+var sTime = new Date().getTime();
+(function(i,s,o,g,r,a,m){i['webObject']=g;i['webUid']=r;a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})
+(window,document,'script','//coop20.weblog.cafe24.com/weblog.js?v='+sTime,'coop20_8');
+</script>
+<!-- 리포트2.0 로그분석코드 완료 -->
+</body>
+</html>
