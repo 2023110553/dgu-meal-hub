@@ -8,8 +8,14 @@ from zoneinfo import ZoneInfo
 from . import dflex, namsan, sangnokwon
 from .boards import WeeklyPost, select_post
 from .crop import crop_daily_column
-from .download import build_session, download_asset, fetch
-from .validation import ValidationError, sha256_bytes, validate_png
+from .download import build_session, download_asset, fetch, fetch_for_diagnostics
+from .validation import (
+    ResponseClassificationError,
+    ValidationError,
+    classify_sangnokwon_response,
+    sha256_bytes,
+    validate_png,
+)
 
 
 def _base_result(requested_date: date) -> dict[str, object]:
@@ -51,28 +57,119 @@ def collect_offline(requested_date: date, fixtures_dir: Path, output_dir: Path) 
 
 
 def _failure(restaurant_id: str, name: str, source_url: str, exc: Exception) -> dict[str, object]:
-    status = "ACCESS_BLOCKED" if "보안 확인" in str(exc) else "DOWNLOAD_ERROR"
-    if isinstance(exc, (ValueError, ValidationError)):
+    if isinstance(exc, ResponseClassificationError):
+        status = exc.status
+    elif isinstance(exc, (ValueError, ValidationError)):
         status = "VALIDATION_ERROR"
+    else:
+        status = "DOWNLOAD_ERROR"
     return {"id": restaurant_id, "name": name, "status": status, "source_url": source_url, "source_detail_url": None, "source_week_start": None, "source_week_end": None, "meals": [], "original_image_url": None, "daily_crop_path": None, "artifacts": {}, "error": str(exc)}
+
+
+def _response_metadata(response: object, requested_url: str, route: str) -> dict[str, object]:
+    content = response.content
+    return {
+        "route": route,
+        "requested_url": requested_url,
+        "status_code": response.status_code,
+        "final_url": response.url,
+        "content_type": response.headers.get("Content-Type"),
+        "size": len(content),
+        "sha256": sha256_bytes(content),
+        "redirect_chain": [{"status_code": item.status_code, "url": item.url} for item in response.history],
+    }
+
+
+def _sangnokwon_attempt(session: object, url: str, route: str, output_dir: Path, attempts: list[dict[str, object]]) -> tuple[object, str]:
+    try:
+        response = fetch_for_diagnostics(session, url)
+    except Exception as exc:
+        attempts.append({"route": route, "requested_url": url, "status": "DOWNLOAD_ERROR", "failure_kind": "NETWORK_ERROR", "error": str(exc)})
+        raise
+    text = sangnokwon.decode_html(response.content) if route == "desktop_week" else sangnokwon.decode_mobile_html(response.content)
+    metadata = _response_metadata(response, url, route)
+    try:
+        classify_sangnokwon_response(
+            text,
+            status_code=response.status_code,
+            final_url=response.url,
+            content_type=response.headers.get("Content-Type"),
+            route=route,
+        )
+    except ResponseClassificationError as exc:
+        debug_path = output_dir / "debug" / f"sangnokwon-{route}-response.html"
+        debug_path.parent.mkdir(parents=True, exist_ok=True)
+        debug_path.write_bytes(response.content)
+        metadata.update({"status": exc.status, "failure_kind": exc.failure_kind, "error": str(exc), "debug_html_path": str(debug_path)})
+        attempts.append(metadata)
+        raise
+    metadata["status"] = "SUCCESS"
+    attempts.append(metadata)
+    return response, text
+
+
+def _raise_sangnokwon_structure_failure(
+    response: object,
+    route: str,
+    output_dir: Path,
+    attempts: list[dict[str, object]],
+    exc: Exception,
+) -> None:
+    debug_path = output_dir / "debug" / f"sangnokwon-{route}-response.html"
+    debug_path.parent.mkdir(parents=True, exist_ok=True)
+    debug_path.write_bytes(response.content)
+    if attempts:
+        attempts[-1].update({
+            "status": "PARSE_ERROR",
+            "failure_kind": "HTML_STRUCTURE_CHANGED",
+            "error": str(exc),
+            "debug_html_path": str(debug_path),
+        })
+    raise ResponseClassificationError(
+        "PARSE_ERROR",
+        "HTML_STRUCTURE_CHANGED",
+        f"상록원 HTML 구조를 해석하지 못했습니다: {exc}",
+    ) from exc
 
 
 def collect_live(requested_date: date, output_dir: Path) -> dict[str, object]:
     output = _base_result(requested_date)
     session = build_session()
+    attempts: list[dict[str, object]] = []
     try:
-        response = fetch(session, sangnokwon.SOURCE_URL)
-        text = sangnokwon.decode_html(response.content)
-        displayed = sangnokwon.parse_week(text)
+        response, text = _sangnokwon_attempt(session, sangnokwon.SOURCE_URL, "desktop_week", output_dir, attempts)
+        try:
+            displayed = sangnokwon.parse_week(text)
+        except Exception as exc:
+            _raise_sangnokwon_structure_failure(response, "desktop_week", output_dir, attempts, exc)
         offset = sangnokwon.week_offset(requested_date, displayed)
         if offset:
-            response = fetch(session, sangnokwon.SOURCE_URL + "&" + urlencode({"j": offset}))
-            text = sangnokwon.decode_html(response.content)
-        result = sangnokwon.parse_day(text, requested_date)
-        result["artifacts"]["html"] = {"size": len(response.content), "sha256": sha256_bytes(response.content), "content_type": response.headers.get("Content-Type")}
+            target_url = sangnokwon.SOURCE_URL + "&" + urlencode({"j": offset})
+            response, text = _sangnokwon_attempt(session, target_url, "desktop_week", output_dir, attempts)
+        try:
+            result = sangnokwon.parse_day(text, requested_date)
+        except Exception as exc:
+            _raise_sangnokwon_structure_failure(response, "desktop_week", output_dir, attempts, exc)
+        result["artifacts"]["http_attempts"] = attempts
         output["restaurants"].append(result)
-    except Exception as exc:
-        output["restaurants"].append(_failure("sangnokwon_3f", "상록원 3층", sangnokwon.SOURCE_URL, exc))
+    except Exception as desktop_exc:
+        try:
+            mobile_target = sangnokwon.mobile_url(requested_date)
+            mobile_response, mobile_text = _sangnokwon_attempt(session, mobile_target, "mobile_day", output_dir, attempts)
+            try:
+                result = sangnokwon.parse_mobile_day(mobile_text, requested_date)
+            except Exception as exc:
+                _raise_sangnokwon_structure_failure(mobile_response, "mobile_day", output_dir, attempts, exc)
+            result["source_url"] = mobile_response.url
+            result["fallback_used"] = "mobile_day"
+            result["artifacts"]["http_attempts"] = attempts
+            output["restaurants"].append(result)
+        except Exception as mobile_exc:
+            failure = _failure("sangnokwon_3f", "상록원 3층", sangnokwon.SOURCE_URL, mobile_exc)
+            failure["failure_kind"] = getattr(mobile_exc, "failure_kind", "NETWORK_OR_PARSE_ERROR")
+            failure["artifacts"]["http_attempts"] = attempts
+            failure["desktop_error"] = str(desktop_exc)
+            output["restaurants"].append(failure)
 
     for module, restaurant_id, name in ((namsan, "namsan_dorm", "남산학사"), (dflex, "dflex", "경영관 D-Flex")):
         try:
@@ -100,6 +197,17 @@ def collect_live(requested_date: date, output_dir: Path) -> dict[str, object]:
                 try:
                     pdf_path = output_dir / "original" / f"{restaurant_id}-{post.article_id}.pdf"
                     result["artifacts"]["pdf"] = download_asset(session, module.BASE_URL, str(detail["pdf_url"]), pdf_path, "pdf")
+                    if restaurant_id == "dflex":
+                        try:
+                            result["meals"] = dflex.parse_pdf_day(pdf_path.read_bytes(), requested_date)
+                            result["artifacts"]["pdf_menu_extraction"] = {
+                                "method": "pdf-vector-text-coordinates",
+                                "meal_count": len(result["meals"]),
+                                "ai_api_used": False,
+                            }
+                        except Exception as parse_exc:
+                            result["artifacts"]["pdf_parse_error"] = str(parse_exc)
+                            result["status"] = "PARTIAL_SUCCESS"
                 except Exception as asset_exc:
                     result["artifacts"]["pdf_error"] = str(asset_exc)
                     result["status"] = "PARTIAL_SUCCESS"

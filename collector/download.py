@@ -27,6 +27,11 @@ def fetch(session: requests.Session, url: str, *, method: str = "GET") -> reques
     return response
 
 
+def fetch_for_diagnostics(session: requests.Session, url: str, *, method: str = "GET") -> requests.Response:
+    """Return the response even for HTTP errors so callers can archive evidence."""
+    return session.request(method, url, timeout=(5, 20), allow_redirects=True)
+
+
 def download_asset(session: requests.Session, base_url: str, asset_url: str, destination: Path, kind: str) -> dict[str, object]:
     response = fetch(session, urljoin(base_url, asset_url))
     content = response.content
