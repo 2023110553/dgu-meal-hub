@@ -1,0 +1,68 @@
+name: Collector feasibility
+
+on:
+  workflow_dispatch:
+    inputs:
+      requested_date:
+        description: "조회 날짜 (YYYY-MM-DD, 비우면 한국 시간 오늘)"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements-dev.txt
+
+      - name: Offline parser tests
+        run: python -m pytest -q
+
+      - name: Resolve requested date
+        id: requested
+        shell: bash
+        env:
+          INPUT_DATE: ${{ inputs.requested_date }}
+        run: |
+          if [[ -n "$INPUT_DATE" ]]; then
+            value="$INPUT_DATE"
+          else
+            value="$(TZ=Asia/Seoul date +%F)"
+          fi
+          echo "date=$value" >> "$GITHUB_OUTPUT"
+
+      - name: Live collection
+        id: live
+        continue-on-error: true
+        run: python -m collector --date "${{ steps.requested.outputs.date }}" --live --output-dir artifacts/live
+
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: feasibility-${{ steps.requested.outputs.date }}
+          path: artifacts/
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Enforce live result
+        if: always()
+        shell: bash
+        run: |
+          if [[ "${{ steps.live.outcome }}" != "success" ]]; then
+            echo "Live collection failed or returned a partial/invalid result. Inspect the uploaded artifact."
+            exit 1
+          fi
